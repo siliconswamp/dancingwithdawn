@@ -4,7 +4,7 @@ var path = require('path'),
     morgan = require('morgan'),
     bodyParser = require('body-parser'),
     config = require('./config'),
-    listingsRouter = require('../routes/listings.server.routes');
+    listingsRouter = require('../routes/portal.server.routes');
 
 module.exports.init = function() {
   //connect to database
@@ -20,14 +20,6 @@ module.exports.init = function() {
   app.use(bodyParser.json());
 
   
-  /**TODO
-  Serve static files */
-  app.use('/', express.static(__dirname + '/../../client'))
-
-  /**TODO 
-  Use the listings router for requests to the api */
-  app.use('/api/listings', listingsRouter);
-
   /**TODO 
   Go to homepage for all routes not specified */ 
   app.all('/*', function(req, res) {
