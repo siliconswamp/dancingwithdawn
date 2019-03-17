@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Login Page</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    <link rel="stylesheet" href="styles/main.css">
+</head>
+<body ng-app="directoryApp">
+<div class="container">
+    <div class="row">
+        <h1>Login Portal</h1>
+    </div>
+    <div class="row" ng-controller="PortalController">
+        <div class="col-md-6">
+            </br>
+            <!-- Display text box to add new listings -->
+            <div  ng-app ng-controller="addListing" style="line-height: 10pt;">
+                Email:    <input type="text" ng-model="newListing.code" onClick="this.setSelectionRange(0, this.value.length)" /></br></br>
+                Password:    <input type="text" ng-model="newListing.name" onClick="this.setSelectionRange(0, this.value.length)" /></br></br>
+                <input type="submit" ng-click="login()" value="Add"></input>
+                </br></br>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js" integrity="sha512-K1qjQ+NcF2TYO/eI3M6v8EiNYZfA95pQumfvcVrTHtwQVDG+aHRqLi/ETn2uB+1JqwYqVG3LIvdm9lj6imS/pQ==" crossorigin="anonymous"></script>
+<script src="https://code.angularjs.org/1.4.3/angular.js"></script>
+<script src="js/app.js"></script>
+<script src="js/factories/portalMethods.js"></script>
+<script src="js/controllers/portalController.js"></script>
+</body>
+</html>
