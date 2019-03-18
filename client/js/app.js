@@ -2,4 +2,4 @@
 angular.module('portal', []);
 
 /* register the application and inject all the necessary dependencies */
-var app = angular.module('directoryApp', ['portal']);
+var app = angular.module('portalApp', ['portal']);

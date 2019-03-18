@@ -1,15 +1,19 @@
-angular.module('portal').controller('PortalController', ['$scope', 'Portal', 
+var app = angular.module('portal', []);
+app.controller('PortalController', function($scope) {
 
-  function($scope, Portal) {
-	  
-	  
-	// Login in existing user
+
+
     $scope.loginUser = function() {
-	 
-	$scope.login = function(){
-		var currentUser = $scope.userlogin;
-		Portal.login(currentUser);
-	}
-    };
-  }
-]);
+        $scope.loginInfo = {
+            email: "test@email.com",
+            password: "password123"
+        };
+    }
+
+    $scope.newUser = function() {
+        $scope.loginInfo = {
+            email: "test@email.com",
+            password: "password123"
+        };
+    }
+});
