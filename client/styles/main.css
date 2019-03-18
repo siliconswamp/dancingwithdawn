@@ -75,3 +75,7 @@ body{
 .dropdown:hover .dropdown-content {
   display: block;
 }
+
+.content{
+  padding: 0px 20px;
+}
