@@ -16,4 +16,10 @@ app.controller('PortalController', function($scope) {
             password: "password123"
         };
     }
+
+    $scope.homePage = function(){
+        $scope.text = {
+            summary: ""
+        }
+    }
 });

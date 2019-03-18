@@ -3,7 +3,7 @@ var mongoose = require('mongoose'),
     Schema = mongoose.Schema;
 
 /* Create your schema */
-var existingUserSchema = new Schema({
+var loginSchema = new Schema({
   email: {
     type: String, 
     required: true
@@ -15,8 +15,25 @@ var existingUserSchema = new Schema({
   }
 });
 
+var websiteTextSchema = new Schema({
+  type: {
+    type: String,
+    required: true
+  },
+  message: {
+    type: String,
+    required: false
+  }
+    });
+
 /* Use your schema to instantiate a Mongoose model */
-var Portal = mongoose.model('Portal', existingUserSchema);
+var Portal = mongoose.model('Portal', loginSchema);
+var WebText = mongoose.model('WebText', websiteTextSchema);
 
 /* Export the model to make it avaiable to other parts of your Node application */
-module.exports = Portal;
+module.exports={
+
+  loginSchema:loginSchema,
+  websiteTextSchema:websiteTextSchema,
+
+};

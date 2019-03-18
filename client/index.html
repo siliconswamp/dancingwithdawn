@@ -8,8 +8,8 @@
 </head>
 <body>
 <div id="header"></div>
-<div class="content">
-    <div>
+<div class="content" ng-controller="PortalController">
+    <div  ng-app ng-controller="homePage">
     <span id="secondHeader" height="300px">
         <img style="padding-left:20%;" src="images/logo_nowords.png" height="200">
         <div style="color:#636363; text-align: center; float: right; padding-right: 200px; font-variant: small-caps; vertical-align: center"  width="500" height="200">
@@ -23,20 +23,18 @@
         <img style="padding-left:40px; width: 40%" src="images/childernFabric.png">
         <div style="float:right; width: 50%; padding-right: 20px">
             <h4>Building Creative Minds With Dance & Music</h4>
-            </br></br>
-            Created with tiny dancers in mind, we offer exciting classes in creative movement, ballet, tap, storytime theatre,
-            and preschool hiphop. Classes are designed for students from 2 to 10 years old.</br></br>
-            Each class is carefully created for fun and creativity. Brand new friendships are made,
-            and children have the ideal environment for exploring their imagination, grow their minds,
-            and let out their energy! Dancing can help encourage social interation, physical activity,
-            improved self-esteem, and education. Classes are taught by a certified instructor. Working with all child care,
-            elementary, genders, and abilities.</br></br>
-            Bringing enrichment classes into your classrooms!
+            <span ng-model="text.summary"/>
         </div>
     </span>
     </div>
 </div>
-</body>
-</html>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+<script src="https://code.angularjs.org/1.4.3/angular.js"></script>
+<script src="js/app.js"></script>
+<script src="js/factories/portalMethods.js"></script>
+<script src="js/controllers/portalController.js"></script>
 <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
 <script src="js/scripts/content.js"></script>
+</body>
+</html>
