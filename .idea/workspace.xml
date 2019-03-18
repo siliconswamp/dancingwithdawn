@@ -2,16 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0878ecaa-3695-4ea5-a564-ae24efe7aa98" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/client/images/childernFabric.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/images/logo.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/images/logo_nowords.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/header.html" beforeDir="false" afterPath="$PROJECT_DIR$/client/header.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/client/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/js/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/js/app.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/js/controllers/portalController.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/js/controllers/portalController.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/client/login.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/styles/main.css" beforeDir="false" afterPath="$PROJECT_DIR$/client/styles/main.css" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -50,10 +41,11 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/client/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="221">
-              <caret line="13" column="69" lean-forward="true" selection-start-line="13" selection-start-column="69" selection-end-line="13" selection-end-column="69" />
+            <state relative-caret-position="68">
+              <caret line="4" column="36" lean-forward="true" selection-start-line="4" selection-start-column="36" selection-end-line="4" selection-end-column="36" />
               <folding>
                 <element signature="n#style#0;n#img#0;n#span#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#spz#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#h1#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#h5#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#img#0;n#span#0;n#div#1;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
@@ -296,7 +288,7 @@
       <workItem from="1552859247672" duration="1417000" />
       <workItem from="1552866675703" duration="182000" />
       <workItem from="1552867049928" duration="1148000" />
-      <workItem from="1552868325252" duration="13835000" />
+      <workItem from="1552868325252" duration="14132000" />
     </task>
     <task id="LOCAL-00001" summary="add home page images">
       <created>1552867102455</created>
@@ -354,11 +346,18 @@
       <option name="project" value="LOCAL" />
       <updated>1552873500376</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="updated login form, add home page impaes">
+      <created>1552882339956</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1552882339956</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="16582000" />
+    <option name="totallyTimeSpent" value="16879000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="869" y="1074" width="1381" height="885" extended-state="6" />
@@ -409,7 +408,8 @@
     <MESSAGE value="add home page images" />
     <MESSAGE value="update config" />
     <MESSAGE value="style updated" />
-    <option name="LAST_COMMIT_MESSAGE" value="style updated" />
+    <MESSAGE value="updated login form, add home page impaes" />
+    <option name="LAST_COMMIT_MESSAGE" value="updated login form, add home page impaes" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/server/tests/portal.server.routes.test.js">
@@ -554,10 +554,11 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/client/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="13" column="69" lean-forward="true" selection-start-line="13" selection-start-column="69" selection-end-line="13" selection-end-column="69" />
+        <state relative-caret-position="68">
+          <caret line="4" column="36" lean-forward="true" selection-start-line="4" selection-start-column="36" selection-end-line="4" selection-end-column="36" />
           <folding>
             <element signature="n#style#0;n#img#0;n#span#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#spz#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#h1#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#h5#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#img#0;n#span#0;n#div#1;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
