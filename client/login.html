@@ -7,12 +7,23 @@
 </head>
 <body ng-app="directoryApp">
 <div id="header"></div>
-<div class="container">
+<div class="content">
     <div class="row">
         <h1>Login Portal</h1>
     </div>
-    <div class="row" ng-controller="PortalController">
-        <div class="col-md-6">
+    <div ng-controller="PortalController" class="login">
+        <div id="existingUser">
+            </br>
+            <!-- Display text box to add new listings -->
+            <div  ng-app ng-controller="loginUser" style="line-height: 10pt;">
+                Email:    <input type="text" ng-model="loginInfo.email" onClick="this.setSelectionRange(0, this.value.length)" /></br></br>
+                Password:    <input type="text" ng-model="loginInfo.password" onClick="this.setSelectionRange(0, this.value.length)" /></br></br>
+                <input type="submit" ng-click="login()" value="Add"></input>
+                </br></br>
+            </div>
+            <a href="#">New User?</a>
+        </div>
+        <div id="newUser">
             </br>
             <!-- Display text box to add new listings -->
             <div  ng-app ng-controller="loginUser" style="line-height: 10pt;">
