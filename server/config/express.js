@@ -1,5 +1,5 @@
-var path = require('path'),  
-    express = require('express'), 
+var path = require('path'),
+    express = require('express'),
     mongoose = require('mongoose'),
     morgan = require('morgan'),
     bodyParser = require('body-parser'),
@@ -16,15 +16,20 @@ module.exports.init = function() {
   //enable request logging for development debugging
   app.use(morgan('dev'));
 
-  //body parsing middleware 
+  //body parsing middleware
   app.use(bodyParser.json());
 
-  
-  /**TODO 
-  Go to homepage for all routes not specified */ 
-  app.all('/*', function(req, res) {
-    res.sendFile(path.resolve('client/index.html'));
-  });
-	
+  /**TODO
+   Serve static files */
+  app.use('/', express.static('client'));
+
+  /**TODO
+   Use the listings router for requests to the api */
+  app.use('/api/listings', listingsRouter);
+
+  /**TODO
+   Go to homepage for all routes not specified */
+  app.use(express.static('../../client/index.html'));
+
   return app;
-};  
+};
