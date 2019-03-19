@@ -113,3 +113,22 @@ ul{
   padding-top: 1.5em;
   font-size: 10px;
 }
+
+.pageContent {
+  line-height: normal;
+}
+
+.footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  text-align: center;
+}
+
+.footer a {
+  text-decoration: none;
+  color: #636363;
+  padding-left: 10px;
+  padding-right: 10px;
+}

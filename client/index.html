@@ -12,27 +12,26 @@
     <div ng-controller="PortalController">
         <div>
             </br>
-            <div>
-                <span id="secondHeader" height="300px">
-                    <img style="padding-left:20%;" src="images/logo_nowords.png" height="200">
-                    <div style="color:#636363; text-align: center; float: right; padding-right: 200px; font-variant: small-caps; vertical-align: center"  width="500" height="200">
-                        <h1 style="margin-bottom: 0px">Dance With Dawn</h1>
-                        <h5 style="margin-top: 0px; color: #969696;">Kids Dance & Theatre Classes Filled With Love & Joy</h5>
-                    </div>
-                </span>
+            <div style="text-align: right;">
+                <div style="color:#636363; text-align: center; float: right; padding-right: 200px; font-variant: small-caps; vertical-align: center"  width="500" height="200">
+                    <h1 style="clear: left; margin-bottom: 0px">Dance With Dawn</h1>
+                    <h5 style="margin-top: 0px; color: #969696;">Kids Dance & Theatre Classes Filled With Love & Joy</h5>
+                </div>
+                <img style="float: right;" src="images/logo_nowords.png" height="100">
             </div>
-            <div ng-app ng-controller="webtext" style="line-height: 10pt;">
+            <div ng-app ng-controller="webtext" style="line-height: 10pt; display:inline-block;">
                 <span>
                     <img style="padding-left:40px; width: 40%" src="images/childernFabric.png">
                     <div style="float:right; width: 50%; padding-right: 20px">
                         <h4>Building Creative Minds With Dance & Music</h4>
-                        <label>{{homepage.summary}}</label>
+                        <label class="pageContent">{{homepage.summary}}</label>
                     </div>
                 </span>
             </div>
         </div>
     </div>
 </div>
+<div id="footer"></div>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
 <script src="https://code.angularjs.org/1.4.3/angular.js"></script>
