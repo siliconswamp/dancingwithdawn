@@ -25,9 +25,7 @@ angular.module('portal_collections').controller('PortalController', ['$scope', '
             }
         };
 
-        $scope.newUser = function() {
-
-        };
+        $scope.newUser = function() {};
     }
 ]);
 

@@ -17,10 +17,12 @@
                 <div class="form">
                     <ul>
                         <li><h2>Current User</h2></li>
-                        <li><label>Email<input ng-model="loginInfo.email" type="email" placeholder="ex: myname@example.com" data-component="email"></label>                        </li>
+                        <li><label>Email<input ng-model="loginInfo.email" type="email" data-component="email"></label>                        </li>
                         <li><label>Password<input ng-model="loginInfo.password" type="text"></label></li>
                     </ul>
                 </div>
+                <input type="submit" onclick="location.href='http://localhost:8080/adminportal.html';" value="Login"/>
+                </br></br>
             </div>
             <a href="#" ng-click="showHere = true">New User?</a>
         </div>
@@ -33,28 +35,28 @@
                         <li><h2>New User</h2></li>
                         <li><h6>Name</h6></li>
                         <li>
-                            <label>First Name<input type="text" ng-model="newUser.first_name"></label>
-                            <label>Last Name<input type="text" ng-model="newUser.last_name"></label>
+                            <label>First Name<input type="text" ng-model="loginInfo.first_name"></label>
+                            <label>Last Name<input type="text" ng-model="loginInfo.last_name"></label>
                         </li>
                         <li>
-                            <label>Email<input type="email" ng-model="newUser.email" data-component="email"></label>
+                            <label>Email<input type="email" ng-model="loginInfo.email" data-component="email"></label>
                         </li>
                         <li>
-                            <label>Password<input type="text" ng-model="newUser.password"></label>
-                            <label>Verify Password<input type="text" ng-model="newUser.verifyPassword"></label>
+                            <label>Password<input type="text" ng-model="loginInfo.password"></label>
+                            <label>Verify Password<input type="text" ng-model="loginInfo.verifyPassword"></label>
                         </li>
                         <li>
-                            <label>Cell Phone<input type="text" ng-model="newUser.cell_number"></label>
-                            <label>Alt Phone<input type="text" ng-model="newUser.alt_number"></label>
+                            <label>Cell Phone<input type="text" ng-model="loginInfo.cell_number"></label>
+                            <label>Alt Phone<input type="text" ng-model="loginInfo.alt_number"></label>
                         </li>
-                        <li><label>Street<input type="text" ng-model="newUser.street"></label></li>
-                        <li><label>City<input type="text" ng-model="newUser.city"></label></li>
-                        <li><label>State<input type="text" ng-model="newUser.state"></label></li>
-                        <li><label>Zip<input type="text" ng-model="newUser.zip"></label></li>
+                        <li><label>Street<input type="text" ng-model="loginInfo.street"></label></li>
+                        <li><label>City<input type="text" ng-model="loginInfo.city"></label></li>
+                        <li><label>State<input type="text" ng-model="loginInfo.state"></label></li>
+                        <li><label>Zip<input type="text" ng-model="loginInfo.zip"></label></li>
                         <li><label style="text-align: center">Subscribe to Newsletter?<input type="checkbox" ng-model="newUser.subscribe"></label></li>
                     </ul>
                 </div>
-                <input type="submit" ng-click="login()" value="Create Account"/>
+                <input type="submit" onclick="location.href='adminportal.html';" value="Create Account"/>
                 </br></br>
             </div>
             <a href="#" ng-click="showHere = false">Existing User?</a>
