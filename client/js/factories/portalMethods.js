@@ -1,10 +1,13 @@
-angular.module('portal', []).factory('Portal', function($http) {
-  var methods = {
-	  return login: function(){
-		  //determine if admin or parent
-		  return $http.get('https://dancingwithdawn.herokuapp.com/', login_id, admin);
-	  }
-  };
+angular.module('portal_collections', []).factory('Portal', function($http) {
+    var collections = {
+        admin_features: function(){
+            return $http.get('http://localhost:8080/api/admin_features');
+        },
 
-  return methods;
+        logins: function(email, password){
+            return $http.get('http://localhost:8080/api/logins', email, password);
+        }
+    };
+
+    return collections;
 });

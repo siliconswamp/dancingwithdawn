@@ -28,12 +28,10 @@ var websiteTextSchema = new Schema({
 
 /* Use your schema to instantiate a Mongoose model */
 var Portal = mongoose.model('Portal', loginSchema);
-var WebText = mongoose.model('WebText', websiteTextSchema);
+var WebText = mongoose.model('admin_features', websiteTextSchema);
 
-/* Export the model to make it avaiable to other parts of your Node application */
+/* Export the model to make it available to other parts of your Node application */
 module.exports={
-
-  loginSchema:loginSchema,
-  websiteTextSchema:websiteTextSchema,
-
+  Portal:Portal,
+  WebText:WebText
 };

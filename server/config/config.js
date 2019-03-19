@@ -4,7 +4,7 @@
 
 module.exports = {
   db: {
-    uri: 'mongodb+srv://admin:CEN3031team3@webportaldb-0n9lg.mongodb.net/test?retryWrites=true'
+    uri: 'mongodb://remeetest:remeetest@webportaldb-shard-00-00-0n9lg.mongodb.net:27017,webportaldb-shard-00-01-0n9lg.mongodb.net:27017,webportaldb-shard-00-02-0n9lg.mongodb.net:27017/portal_db?ssl=true&replicaSet=webportaldb-shard-0&authSource=admin&retryWrites=true'
   },
   port: process.env.PORT||8080
 };
