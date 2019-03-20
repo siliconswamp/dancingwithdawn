@@ -4,28 +4,68 @@
     <meta charset="UTF-8">
     <title>Login Page</title>
     <link rel="stylesheet" href="styles/main.css">
+    <link rel="icon" href="images\logo_nowords.png" type="image/png">
 </head>
-<body ng-app="directoryApp">
+<body ng-app="portalApp">
 <div id="header"></div>
-<div class="container">
-    <div class="row">
-        <h1>Login Portal</h1>
-    </div>
-    <div class="row" ng-controller="PortalController">
-        <div class="col-md-6">
+<div class="content">
+    <div ng-controller="PortalController" class="login">
+        <div id="existingUser" ng-hide="showHere">
             </br>
             <!-- Display text box to add new listings -->
-            <div  ng-app ng-controller="loginUser" style="line-height: 10pt;">
-                Email:    <input type="text" ng-model="loginInfo.email" onClick="this.setSelectionRange(0, this.value.length)" /></br></br>
-                Password:    <input type="text" ng-model="loginInfo.password" onClick="this.setSelectionRange(0, this.value.length)" /></br></br>
-                <input type="submit" ng-click="login()" value="Add"></input>
+            <div ng-app ng-controller="loginUser" style="line-height: 10pt;">
+                <div class="form">
+                    <ul>
+                        <li><h2>Current User</h2></li>
+                        <li><label>Email<input ng-model="loginInfo.email" type="email" data-component="email"></label>                        </li>
+                        <li><label>Password<input ng-model="loginInfo.password" type="text"></label></li>
+                    </ul>
+                </div>
+                <input type="submit" onclick="location.href='http://localhost:8080/adminportal.html';" value="Login"/>
                 </br></br>
             </div>
+            <a href="#" ng-click="showHere = true">New User?</a>
+        </div>
+        <div id="newUser" ng-show="showHere">
+            </br>
+            <!-- Display text box to add new listings -->
+            <div ng-app ng-controller="newUser" style="line-height: 10pt;">
+                <div class="form">
+                    <ul>
+                        <li><h2>New User</h2></li>
+                        <li><h6>Name</h6></li>
+                        <li>
+                            <label>First Name<input type="text" ng-model="loginInfo.first_name"></label>
+                            <label>Last Name<input type="text" ng-model="loginInfo.last_name"></label>
+                        </li>
+                        <li>
+                            <label>Email<input type="email" ng-model="loginInfo.email" data-component="email"></label>
+                        </li>
+                        <li>
+                            <label>Password<input type="text" ng-model="loginInfo.password"></label>
+                            <label>Verify Password<input type="text" ng-model="loginInfo.verifyPassword"></label>
+                        </li>
+                        <li>
+                            <label>Cell Phone<input type="text" ng-model="loginInfo.cell_number"></label>
+                            <label>Alt Phone<input type="text" ng-model="loginInfo.alt_number"></label>
+                        </li>
+                        <li><label>Street<input type="text" ng-model="loginInfo.street"></label></li>
+                        <li><label>City<input type="text" ng-model="loginInfo.city"></label></li>
+                        <li><label>State<input type="text" ng-model="loginInfo.state"></label></li>
+                        <li><label>Zip<input type="text" ng-model="loginInfo.zip"></label></li>
+                        <li><label style="text-align: center">Subscribe to Newsletter?<input type="checkbox" ng-model="newUser.subscribe"></label></li>
+                    </ul>
+                </div>
+                <input type="submit" onclick="location.href='adminportal.html';" value="Create Account"/>
+                </br></br>
+            </div>
+            <a href="#" ng-click="showHere = false">Existing User?</a>
         </div>
     </div>
 </div>
+<div id="footer"></div>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js" integrity="sha512-K1qjQ+NcF2TYO/eI3M6v8EiNYZfA95pQumfvcVrTHtwQVDG+aHRqLi/ETn2uB+1JqwYqVG3LIvdm9lj6imS/pQ==" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
 <script src="https://code.angularjs.org/1.4.3/angular.js"></script>
 <script src="js/app.js"></script>
 <script src="js/factories/portalMethods.js"></script>
