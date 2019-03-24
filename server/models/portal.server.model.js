@@ -20,6 +20,14 @@ var websiteTextSchema = new Schema({
     type: String,
     required: true
   },
+  header: {
+    type: String,
+    required: false
+  },
+  header2: {
+    type: String,
+    required: false
+  },
   message: {
     type: String,
     required: false
