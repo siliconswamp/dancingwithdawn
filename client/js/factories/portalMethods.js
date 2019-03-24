@@ -1,8 +1,8 @@
 angular.module('portal_collections', []).factory('Portal', function($http) {
     var collections = {
-        admin_features: function(){
-            //return $http.get('http://localhost:8080/api/admin_features');
-            return $http.get('https://dancingwithdawn.herokuapp.com/api/admin_features');
+        web_text: function(){
+            return $http.get('http://localhost:8080/api/admin_features');
+            //return $http.get('https://dancingwithdawn.herokuapp.com/api/admin_features');
         },
 
         contact_form: function(contact_info) {

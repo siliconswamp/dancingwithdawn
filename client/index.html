@@ -19,56 +19,56 @@
                 </div>
                 <img style="float: right;" src="images/logo_nowords.png" height="100">
             </div>
-            <div class="homepagediv" ng-app ng-controller="webtext">
+            <div class="homepagediv">
                 <span>
                     <img style="padding-left:40px; width: 40%" src="images/childernFabric.png">
                     <div style="float:right; width: 50%; padding-right: 20px">
-                        <h4>{{homepage.header}}</h4>
-                        <label class="pageContent">{{homepage.summary}}</label>
+                        <h4>{{(admin_features | filter:{type:'home_summary'})[0].header}}</h4>
+                        <label class="pageContent">{{(admin_features | filter:{type:'home_summary'})[0].message}}</label>
                     </div>
                 </span>
             </div>
-            <div class="homepagediv" ng-app ng-controller="webtext" style="background-color: #b5f2f1;">
+            <div class="homepagediv" style="background-color: #b5f2f1;">
                 <span>
                     <div style="float:left; width: 50%; padding-left: 40px; text-align: center">
-                        <h4>{{homepage.aboutme_header}}</h4>
-                        <label class="pageContent">{{homepage.aboutme_body}}</label></br></br>
+                        <h4>{{(admin_features | filter:{type:'about_me'})[0].header}}</h4>
+                        <label class="pageContent">{{(admin_features | filter:{type:'about_me'})[0].message}}</label></br></br>
                         <a class="button" href='mailto:dawnmrandall@gmail.com'>Schedule A Free Demo Class</a>
                     </div>
                     <img style="padding-left:40px; width: 30%" src="images/about_me.png">
                 </span>
             </div>
-            <div class="homepagediv container" ng-app ng-controller="webtext">
+            <div class="homepagediv container">
                 <div class ="trial_div" id="left">
                     <img src="images/trial_class_1.PNG">
-                    <p class="trial_header">{{homepage.trialclass1_header}}</p>
-                    <p class="trial_subheader">{{homepage.trialclass1_header2}}</p>
-                    <p class="trial_message">{{homepage.trialclass1_body}}</p>
+                    <p class="trial_header">{{(admin_features | filter:{type:'trial_class_1'})[0].header}}</p>
+                    <p class="trial_subheader">{{(admin_features | filter:{type:'trial_class_1'})[0].header2}}</p>
+                    <p class="trial_message">{{(admin_features | filter:{type:'trial_class_1'})[0].message}}</p>
                 </div>
                 <div class ="trial_div" id="right">
                     <img src="images/trial_class_3.PNG">
-                    <p class="trial_header">{{homepage.trialclass3_header}}</p>
-                    <p class="trial_subheader">{{homepage.trialclass3_header2}}</p>
-                    <p class="trial_message">{{homepage.trialclass3_body}}</p>
+                    <p class="trial_header">{{(admin_features | filter:{type:'trial_class_3'})[0].header}}</p>
+                    <p class="trial_subheader">{{(admin_features | filter:{type:'trial_class_3'})[0].header2}}</p>
+                    <p class="trial_message">{{(admin_features | filter:{type:'trial_class_3'})[0].message}}</p>
                 </div>
                 <div class ="trial_div" id="center">
                     <img src="images/trial_class_2.PNG">
-                    <p class="trial_header">{{homepage.trialclass2_header}}</p>
-                    <p class="trial_subheader">{{homepage.trialclass2_header2}}</p>
-                    <p class="trial_message">{{homepage.trialclass2_body}}</p>
+                    <p class="trial_header">{{(admin_features | filter:{type:'trial_class_2'})[0].header}}</p>
+                    <p class="trial_subheader">{{(admin_features | filter:{type:'trial_class_2'})[0].header2}}</p>
+                    <p class="trial_message">{{(admin_features | filter:{type:'trial_class_2'})[0].message}}</p>
                 </div>
             </div>
-            <div class="homepagediv" ng-app ng-controller="webtext" style="background-color:#fdd8ff; text-align: center; align-items: center;">
+            <div class="homepagediv" style="background-color:#fdd8ff; text-align: center; align-items: center;">
                 <span>
-                    <p style="width:100%; font-variant: small-caps; font-size: 40px;">{{homepage.testimony_header}}</p>
+                    <p style="width:100%; font-variant: small-caps; font-size: 40px;">{{(admin_features | filter:{type:'testimony'})[0].header}}</p>
                     <div style="text-align: center; align-items: center;">
                     <div style="width: 100%;">
                         <img style="height: 300px;" src="images/testimony.PNG">
                     </div>
                     <div style="text-align: center; align-items: center; width: 100%;">
                     <div style="width:40%; line-height: normal; background-color: aliceblue; display: inline-block;">
-                        <p>{{homepage.testimony_body}}</p>
-                        <p style="font-style: italic;">{{homepage.testimony_header2}}</p>
+                        <p>{{(admin_features | filter:{type:'testimony'})[0].message}}</p>
+                        <p style="font-style: italic;">{{(admin_features | filter:{type:'testimony'})[0].header2}}</p>
                     </div>
                     </div>
                     </div>
