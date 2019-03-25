@@ -4,6 +4,7 @@ var methods = require('../controllers/portal.server.controller.js'),
     router = express.Router();
 
 router.route('/')
-    .get(methods.list);
+    .get(methods.list)
+    .post(methods.email);
 
 module.exports = router;
