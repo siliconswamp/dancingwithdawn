@@ -12,7 +12,9 @@
 <div class="content">
 <div ng-controller="PortalController">
     <h4>Meet Me</h4>
-    <label class="pageContent">{{(admin_features | filter:{type:'about_me'})[0].message}}</label>
+    <label class="pageContent">{{(admin_features | filter:{type:'meet_me'})[0].header}}</label>
+    <label class="pageContent">{{(admin_features | filter:{type:'meet_me'})[0].header2}}</label>
+    <label class="pageContent">{{(admin_features | filter:{type:'meet_me'})[0].message}}</label>
 </div>
 </div>
 <div id="footer"/></div>
