@@ -5,12 +5,24 @@ var mongoose = require('mongoose'),
     nodeMailer = require('nodemailer');
 
 var webText = Collections.WebText;
+var faqText = Collections.FAQSchema;
 var loginData = Collections.Portal;
 
 /* Retreive all the directory listings, sorted alphabetically by listing code */
-exports.list = function(req, res) {
+exports.admin_text = function(req, res) {
   /** TODO **/
   webText.find({}).sort({type: 1}).exec(function (err,items) {
+    if(err)
+      res.status(400).send(err);
+    else
+      res.status(200).json(items);
+  })
+};
+
+/* Retreive all the directory listings, sorted alphabetically by listing code */
+exports.faq_text = function(req, res) {
+  /** TODO **/
+  faqText.find().exec(function (err,items) {
     if(err)
       res.status(400).send(err);
     else
