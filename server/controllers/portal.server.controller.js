@@ -6,7 +6,7 @@ var mongoose = require('mongoose'),
 
 var webText = Collections.WebText;
 var faqText = Collections.FAQSchema;
-var loginData = Collections.Portal;
+var loginData = Collections.Logins;
 
 /* Retreive all the directory listings, sorted alphabetically by listing code */
 exports.admin_text = function(req, res) {

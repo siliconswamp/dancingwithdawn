@@ -13,8 +13,12 @@ var loginSchema = new Schema({
   password: {
     type: String,
     required: true
+  },
+  admin: {
+    type: Boolean,
+    required: false
   }
-});
+},{collection:'logins'});
 
 /* Create your schema */
 var faqSchema = new Schema({
@@ -45,16 +49,16 @@ var websiteTextSchema = new Schema({
     type: String,
     required: false
   }
-    });
+},{collection:'admin_features'});
 
 /* Use your schema to instantiate a Mongoose model */
-var Portal = mongoose.model('Portal', loginSchema);
+var Logins = mongoose.model('logins', loginSchema);
 var WebText = mongoose.model('admin_features', websiteTextSchema);
 var FAQSchema = mongoose.model('faq', faqSchema);
 
 /* Export the model to make it available to other parts of your Node application */
 module.exports={
-  Portal:Portal,
+  Logins:Logins,
   WebText:WebText,
   FAQSchema:FAQSchema
 };
