@@ -26,5 +26,11 @@ module.exports.init = function() {
   /** Return web text fields **/
   app.use('/api/admin_features', portalRouter);
 
+  /** Return web text fields **/
+  app.use('/api/contact_form', portalRouter);
+
+  /** Return web text fields **/
+  app.use('/api/faq_text', portalRouter);
+
   return app;
 };
