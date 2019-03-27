@@ -25,7 +25,7 @@
 </div>
 
 <div id="ppStaticMenu"></div>
-<div style="float:right; width: 50%; padding-right: 20px">
+<div ng-controller = "HomeController" style="float:right; width: 50%; padding-right: 20px">
                         <h1>Important News</h1>
                         <label class="pageContent">{{(admin_features | filter:{type:'ppNews'})[0].message}}</label>
 						<h1>Schedule</h1>
