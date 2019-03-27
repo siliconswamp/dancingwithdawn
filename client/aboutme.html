@@ -7,10 +7,10 @@
     <link rel="icon" href="images\logo_nowords.png" type="image/png">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
-<body ng-app="portalApp">
+<body ng-app="home_app">
 <div id="header"></div>
 <div class="content">
-<div ng-controller="PortalController">
+<div ng-controller="HomeController">
     <h4>Meet Me</h4>
     <label class="pageContent">{{(admin_features | filter:{type:'meet_me'})[0].header}}</label>
     <label class="pageContent">{{(admin_features | filter:{type:'meet_me'})[0].header2}}</label>
@@ -24,7 +24,7 @@
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
 <script src="https://code.angularjs.org/1.4.3/angular.js"></script>
 <script src="js/app.js"></script>
-<script src="js/factories/portalMethods.js"></script>
-<script src="js/controllers/portalController.js"></script>
+<script src="js/factories/home_factory.js"></script>
+<script src="js/controllers/home_controller.js"></script>
 </body>
 </html>

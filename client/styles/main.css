@@ -199,3 +199,8 @@ input[type=text], select, textarea {
     margin-bottom: 16px;
     resize: vertical;
 }
+
+.tableWrapper {
+    max-height: 400px;
+    overflow: auto;
+}
