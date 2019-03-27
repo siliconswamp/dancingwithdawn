@@ -10,12 +10,32 @@
 <body ng-app="home_app">
 <div id="header"></div>
 <div class="content">
-    <div ng-controller="HomeController">
+    <div ng-controller="HomeController" >
         <h1>What I Offer</h1>
         <label class="pageContent">{{(admin_features | filter:{type:'lesson1'})[0].header}}</label><br>
         <img src ="images/creative_movement.jpeg"><br>
         <label class="pageContent">{{(admin_features | filter:{type:'lesson1'})[0].header2}}</label><br>
-        <label class="pageContent">{{(admin_features | filter:{type:'lesson1'})[0].message}}</label>
+        <label class="pageContent">{{(admin_features | filter:{type:'lesson1'})[0].message}}</label><br>
+        <label class="pageContent">{{(admin_features | filter:{type:'lesson2'})[0].header}}</label><br>
+        <img src ="images/pre_ballet.png"><br>
+        <label class="pageContent">{{(admin_features | filter:{type:'lesson2'})[0].header2}}</label><br>
+        <label class="pageContent">{{(admin_features | filter:{type:'lesson2'})[0].message}}</label><br>
+        <label class="pageContent">{{(admin_features | filter:{type:'lesson3'})[0].header}}</label><br>
+        <img src ="images/worship_dance.png"><br>
+        <label class="pageContent">{{(admin_features | filter:{type:'lesson3'})[0].header2}}</label><br>
+        <label class="pageContent">{{(admin_features | filter:{type:'lesson3'})[0].message}}</label><br>
+        <label class="pageContent">{{(admin_features | filter:{type:'lesson4'})[0].header}}</label><br>
+        <img src ="images/tap_dancing.png"><br>
+        <label class="pageContent">{{(admin_features | filter:{type:'lesson4'})[0].header2}}</label><br>
+        <label class="pageContent">{{(admin_features | filter:{type:'lesson4'})[0].message}}</label><br>
+        <label class="pageContent">{{(admin_features | filter:{type:'lesson5'})[0].header}}</label><br>
+        <img src ="images/creative_drama.png"><br>
+        <label class="pageContent">{{(admin_features | filter:{type:'lesson5'})[0].header2}}</label><br>
+        <label class="pageContent">{{(admin_features | filter:{type:'lesson5'})[0].message}}</label><br>
+        <label class="pageContent">{{(admin_features | filter:{type:'lesson6'})[0].header}}</label><br>
+        <img src ="images/hippity_hop.png"><br>
+        <label class="pageContent">{{(admin_features | filter:{type:'lesson6'})[0].header2}}</label><br>
+        <label class="pageContent">{{(admin_features | filter:{type:'lesson6'})[0].message}}</label><br>
     </div>
 </div>
 <div id="footer"/></div>
