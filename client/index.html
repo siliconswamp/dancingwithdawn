@@ -19,14 +19,74 @@
                 </div>
                 <img style="float: right;" src="images/logo_nowords.png" height="100">
             </div>
-            <div ng-app ng-controller="webtext" style="line-height: 10pt; display:inline-block;">
+            <div class="homepagediv">
                 <span>
                     <img style="padding-left:40px; width: 40%" src="images/childernFabric.png">
                     <div style="float:right; width: 50%; padding-right: 20px">
-                        <h4>Building Creative Minds With Dance & Music</h4>
-                        <label class="pageContent">{{homepage.summary}}</label>
+                        <h4>{{(admin_features | filter:{type:'home_summary'})[0].header}}</h4>
+                        <label class="pageContent">{{(admin_features | filter:{type:'home_summary'})[0].message}}</label>
                     </div>
                 </span>
+            </div>
+            <div class="homepagediv" style="background-color: #b5f2f1;">
+                <span>
+                    <div style="float:left; width: 50%; padding-left: 40px; text-align: center">
+                        <h4>{{(admin_features | filter:{type:'about_me'})[0].header}}</h4>
+                        <label class="pageContent">{{(admin_features | filter:{type:'about_me'})[0].message}}</label></br></br>
+                        <a class="button" href='mailto:dawnmrandall@gmail.com'>Schedule A Free Demo Class</a>
+                    </div>
+                    <img style="padding-left:40px; width: 30%" src="images/about_me.png">
+                </span>
+            </div>
+            <div class="homepagediv container">
+                <div class ="trial_div" id="left">
+                    <img src="images/trial_class_1.png">
+                    <p class="trial_header">{{(admin_features | filter:{type:'trial_class_1'})[0].header}}</p>
+                    <p class="trial_subheader">{{(admin_features | filter:{type:'trial_class_1'})[0].header2}}</p>
+                    <p class="trial_message">{{(admin_features | filter:{type:'trial_class_1'})[0].message}}</p>
+                </div>
+                <div class ="trial_div" id="right">
+                    <img src="images/trial_class_3.png">
+                    <p class="trial_header">{{(admin_features | filter:{type:'trial_class_3'})[0].header}}</p>
+                    <p class="trial_subheader">{{(admin_features | filter:{type:'trial_class_3'})[0].header2}}</p>
+                    <p class="trial_message">{{(admin_features | filter:{type:'trial_class_3'})[0].message}}</p>
+                </div>
+                <div class ="trial_div" id="center">
+                    <img src="images/trial_class_2.png">
+                    <p class="trial_header">{{(admin_features | filter:{type:'trial_class_2'})[0].header}}</p>
+                    <p class="trial_subheader">{{(admin_features | filter:{type:'trial_class_2'})[0].header2}}</p>
+                    <p class="trial_message">{{(admin_features | filter:{type:'trial_class_2'})[0].message}}</p>
+                </div>
+            </div>
+            <div class="homepagediv" style="background-color:#fdd8ff; text-align: center; align-items: center;">
+                <span>
+                    <p style="width:100%; font-variant: small-caps; font-size: 40px;">{{(admin_features | filter:{type:'testimony'})[0].header}}</p>
+                    <div style="text-align: center; align-items: center;">
+                    <div style="width: 100%;">
+                        <img style="height: 300px;" src="images/testimony.png">
+                    </div>
+                    <div style="text-align: center; align-items: center; width: 100%;">
+                    <div style="width:40%; line-height: normal; background-color: aliceblue; display: inline-block;">
+                        <p>{{(admin_features | filter:{type:'testimony'})[0].message}}</p>
+                        <p style="font-style: italic;">{{(admin_features | filter:{type:'testimony'})[0].header2}}</p>
+                    </div>
+                    </div>
+                    </div>
+                </span>
+            </div>
+            <div style="text-align: center; margin-top: 20px;">
+                <div style="display: inline-block">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d8246.649597889767!2d-82.32316375859479!3d29.653385801096295!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sus!4v1553457242523" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen></iframe>
+                </div>
+            </div>
+            <div class="contactform" ng-app ng-controller="contact_form">
+                <label for="contactname">Name</label>
+                <input ng-model="contact.name" type="text" id="contactname" name="contactname" onClick="this.setSelectionRange(0, this.value.length)">
+                <label for="contactemail">Email</label>
+                <input ng-model="contact.email" type="text" id="contactemail" name="contactemail" onClick="this.setSelectionRange(0, this.value.length)">
+                <label for="contactmessage">Message</label>
+                <textarea ng-model="contact.message" id="contactmessage" name="contactmessage" style="height:200px" onClick="this.setSelectionRange(0, this.value.length)"></textarea>
+                <input type="submit" value="Submit" ng-click="send()">
             </div>
         </div>
     </div>
