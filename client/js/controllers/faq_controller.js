@@ -87,6 +87,7 @@ angular.module('faq_collections').controller('FAQController', ['$scope', 'FAQ',
 
                 FAQ.updateFAQData($scope.updatedFAQ);
                 alert("updated");
+                $scope.faq_text.sort();
                 $scope.display = {show:0};
                 $scope.add = {show:0};
             };
@@ -106,6 +107,7 @@ angular.module('faq_collections').controller('FAQController', ['$scope', 'FAQ',
                 $scope.faq_text.add($scope.newFAQ);
                 $scope.faq_text.sort();
                 alert("added");
+                $scope.faq_text.push($scope.newFAQ);
             };
 
             $scope.display = {show:0};
