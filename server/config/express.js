@@ -4,7 +4,9 @@ var path = require('path'),
     morgan = require('morgan'),
     bodyParser = require('body-parser'),
     config = require('./config'),
-    portalRouter = require('../routes/portal.server.routes');
+    portalRouter = require('../routes/portal.server.routes'),
+    homeRouter = require('../routes/home.server.routes'),
+    faqRouter = require('../routes/faq.server.routes');
 
 module.exports.init = function() {
   //connect to database
@@ -24,13 +26,13 @@ module.exports.init = function() {
   app.use('/', express.static('client'));
 
   /** Return web text fields **/
-  app.use('/api/admin_features', portalRouter);
+  app.use('/api/admin_features', homeRouter);
 
   /** Return web text fields **/
-  app.use('/api/contact_form', portalRouter);
+  app.use('/api/contact_form', homeRouter);
 
   /** Return web text fields **/
-  app.use('/api/faq_text', portalRouter);
+  app.use('/api/faq', faqRouter);
 
   return app;
 };

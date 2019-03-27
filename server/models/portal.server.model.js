@@ -22,6 +22,10 @@ var loginSchema = new Schema({
 
 /* Create your schema */
 var faqSchema = new Schema({
+  order: {
+    type: NumberInt,
+    required: true
+  },
   question: {
     type: String,
     required: true
