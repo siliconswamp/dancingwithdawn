@@ -20,18 +20,9 @@ module.exports.init = function() {
 
   //body parsing middleware
   app.use(bodyParser.json());
-
-  /**TODO
-   Serve static files */
   app.use('/', express.static('client'));
-
-  /** Return web text fields **/
   app.use('/api/admin_features', homeRouter);
-
-  /** Return web text fields **/
   app.use('/api/contact_form', homeRouter);
-
-  /** Return web text fields **/
   app.use('/api/faq', faqRouter);
 
   return app;

@@ -25,7 +25,6 @@ angular.module('faq_collections').controller('FAQController', ['$scope', 'FAQ',
                 answer: ""
             };
 
-
             $scope.showDetails = function(selection){
                 $scope.updatedFAQ = {
                     _id: selection._id,
@@ -65,7 +64,6 @@ angular.module('faq_collections').controller('FAQController', ['$scope', 'FAQ',
                 $scope.display = {show:0};
                 $scope.add = {show:0};
             };
-
 
             $scope.updateFAQ = function() {
                 if($scope.updatedFAQ.order < $scope.selectedFAQ.order)
