@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Dancing With Dawn - My Lessons</title>
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="icon" href="images\logo_nowords.png" type="image/png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body ng-app="home_app">
+<div id="header"></div>
+<div class="content">
+    <div ng-controller="HomeController" style = "text-align: center" >
+        <h1 >What I Offer</h1>
+        <label class="pageContent">{{(admin_features | filter:{type:'lesson1'})[0].header}}</label><br>
+        <img src ="images/creative_movement.jpeg"><br>
+        <label class="pageContent">{{(admin_features | filter:{type:'lesson1'})[0].header2}}</label><br><br>
+        <label class="pageContent">{{(admin_features | filter:{type:'lesson1'})[0].message}}</label><br><br>
+        <label class="pageContent">{{(admin_features | filter:{type:'lesson2'})[0].header}}</label><br>
+        <img src ="images/pre_ballet.png"><br>
+        <label class="pageContent">{{(admin_features | filter:{type:'lesson2'})[0].header2}}</label><br><br>
+        <label class="pageContent">{{(admin_features | filter:{type:'lesson2'})[0].message}}</label><br><br>
+        <label class="pageContent">{{(admin_features | filter:{type:'lesson3'})[0].header}}</label><br>
+        <img src ="images/worship_dance.png"><br>
+        <label class="pageContent">{{(admin_features | filter:{type:'lesson3'})[0].header2}}</label><br><br>
+        <label class="pageContent">{{(admin_features | filter:{type:'lesson3'})[0].message}}</label><br><br>
+        <label class="pageContent">{{(admin_features | filter:{type:'lesson4'})[0].header}}</label><br>
+        <img src ="images/tap_dancing.png"><br>
+        <label class="pageContent">{{(admin_features | filter:{type:'lesson4'})[0].header2}}</label><br><br>
+        <label class="pageContent">{{(admin_features | filter:{type:'lesson4'})[0].message}}</label><br><br>
+        <label class="pageContent">{{(admin_features | filter:{type:'lesson5'})[0].header}}</label><br>
+        <img src ="images/creative_drama.png"><br>
+        <label class="pageContent">{{(admin_features | filter:{type:'lesson5'})[0].header2}}</label><br><br>
+        <label class="pageContent">{{(admin_features | filter:{type:'lesson5'})[0].message}}</label><br><br>
+        <label class="pageContent">{{(admin_features | filter:{type:'lesson6'})[0].header}}</label><br>
+        <img src ="images/hippity_hop.png"><br>
+        <label class="pageContent">{{(admin_features | filter:{type:'lesson6'})[0].header2}}</label><br><br>
+        <label class="pageContent">{{(admin_features | filter:{type:'lesson6'})[0].message}}</label><br><br><br>
+    </div>
+</div>
+<div id="footer"/></div>
+<script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+<script src="js/scripts/content.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+<script src="https://code.angularjs.org/1.4.3/angular.js"></script>
+<script src="js/app.js"></script>
+<script src="js/factories/home_factory.js"></script>
+<script src="js/controllers/home_controller.js"></script>
+</body>
+</html>
