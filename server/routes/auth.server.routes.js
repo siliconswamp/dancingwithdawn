@@ -13,7 +13,8 @@ router.get("/register", function(req, res){
    res.render("register", {page: 'register'}); 
 });
 
-//handle sign up logic
+
+// handle sign up logic
 router.post("/register", function(req, res){
     var newUser = new User({username: req.body.username});
     if(req.body.adminCode === process.env.ADMIN_CODE) {
@@ -39,7 +40,7 @@ router.get("/login", function(req, res){
 //handling login logic
 router.post("/login", passport.authenticate("local", 
     {
-        successRedirect: "parentportal.html",
+        successRedirect: "/parentportal",
         failureRedirect: "/login",
         failureFlash: true,
         successFlash: 'Successful Login'
