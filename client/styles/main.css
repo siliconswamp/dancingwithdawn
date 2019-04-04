@@ -205,23 +205,11 @@ input[type=text], select, textarea {
     overflow: auto;
 }
 
+.ppStaticMenu {
+    color: #22bba8;
+}
+
 .ppStaticMenu a {
   text-decoration: none;
   color: #22bba8;
- 
-link{
-  color: #22bba8;
-}
-visited{
-  color: #22bba8;
-}
-hover{
-  color: #22bba8;
-}
-focus{
-  color: #22bba8;
-}
-active{
-  color: #22bba8;
-}
 }

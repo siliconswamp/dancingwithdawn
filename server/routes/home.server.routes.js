@@ -11,5 +11,7 @@ router.route('/')
 router.get("/parentportal", function(req, res){
     res.render("parentportal", {page: 'parentportal'}); 
  });
+router.route('/:_id')
+    .post(methods.update_admin_text);
 
 module.exports = router;
