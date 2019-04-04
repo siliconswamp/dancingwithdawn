@@ -17,6 +17,16 @@ exports.admin_text = function(req, res) {
     });
 };
 
+exports.update_admin_text = function(req, res) {
+    var updated_text = req.body;
+    webText.findByIdAndUpdate(req.params._id, updated_text, function(err, doc){
+        if(err)
+            res.status(400).send(err);
+        else
+            res.status(200).send(doc);
+    });
+};
+
 exports.email = function (req, res) {
     let transporter = nodeMailer.createTransport({
         host: 'smtp.gmail.com',
