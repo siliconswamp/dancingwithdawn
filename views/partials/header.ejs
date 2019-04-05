@@ -1,12 +1,13 @@
 <div class="navbar">
     <img src="images/DanceWithDawn.png" alt="Dance with Dawn" height="128">
+    <a href="#">Signed In As <%= currentUser.username %></a>
     <div class="dropdown" style="text-align: left" style="position: relative;">
         <button class="dropbtn" style="position: absolute; top: 80px; right: 0;">
             <img src="images/menu.png" height="32">
             <i class="fa fa-caret-down"></i>
         </button>
         <div class="dropdown-content"  style="right: 0;">
-            <a href="/index">Home Page</a>
+            <a href="/index"> Home </a>
             <a href="/faq">QA Page</a>
             <a href="/admin_faq">Admin QA Page</a>
             <a href="/aboutme">Meet Me</a>
@@ -19,7 +20,6 @@
                 <a href="/login">Login</a>
                 <a href="/register">Sign Up!</a>
             <% } else { %>
-                <a href="#">Signed In As <%= currentUser.username %></a>
                 <a href="/logout">Logout</a>
             <% } %>
         </div>
