@@ -1,3 +1,4 @@
+<% include ./partials/header %>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -8,7 +9,6 @@
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 <body ng-app="home_app">
-<div id="header"></div>
 <div class="content">
 <div ng-controller="HomeController">
     <h4>Meet Me</h4>
@@ -17,7 +17,7 @@
     <label class="pageContent">{{(admin_features | filter:{type:'meet_me'})[0].message}}</label>
 </div>
 </div>
-<div id="footer"/></div>
+<div id="footer"></div>
 <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
 <script src="js/scripts/content.js"></script>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>

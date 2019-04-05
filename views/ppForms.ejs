@@ -1,13 +1,14 @@
+<% include ./partials/ppHeader %>
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Parent Portal - Account History</title>
+    <title>Parent Portal - Forms</title>
     <link rel="stylesheet" href="styles/main.css">
     <link rel="icon" href="images\logo_nowords.png" type="image/png">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 <body ng-app="home_app">
-<div id="ppHeader"></div>
 <div class="content">
     <div ng-controller="HomeController">
         <div>
@@ -26,7 +27,10 @@
 
 <div id="ppStaticMenu"></div>
 <div style="float:right; width: 100%; padding-right: 20px">
-                        <h1>Account History</h1>
+     
+	<a href="./forms/emergency_contact_form.pdf" download><button> Download Emergency Contact Form <i class="fa fa-file-pdf-o"style="font-size:30px;color:red"></i></button></a>
+    <br><br>
+	<a href="./forms/sign-up-sheet.pdf" download><button> Download New Sign-up Form <i class="fa fa-file-pdf-o"style="font-size:30px;color:red"></i></button></a>
                        
 </div>
 
