@@ -9,6 +9,8 @@ angular.module('home_collections').controller('HomeController', ['$scope', 'Home
             console.log('Unable to retrieve portal details:', error);
         });
 
+        $scope.display = {show:0};
+
         $scope.contact_form = function () {
             $scope.contact = {
                 name: "Your name...",
@@ -55,6 +57,7 @@ angular.module('home_collections').controller('HomeController', ['$scope', 'Home
                 Home.update_text($scope.updated_text);
                 alert("updated");
                 $scope.admin_features.sort();
+                $scope.display = {show:0};
             };
         };
     }
