@@ -1,8 +1,7 @@
 /* Import mongoose and define any variables needed to create the schema */
 var mongoose = require('mongoose'), 
     Schema = mongoose.Schema,
-    NumberInt = require('mongoose-int32'),
-    gridfs = require('mongoose-gridfs');
+    NumberInt = require('mongoose-int32');
 
 /* Create your schema */
 var loginSchema = new Schema({
