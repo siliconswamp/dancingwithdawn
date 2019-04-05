@@ -199,3 +199,29 @@ input[type=text], select, textarea {
     margin-bottom: 16px;
     resize: vertical;
 }
+
+.tableWrapper {
+    max-height: 400px;
+    overflow: auto;
+}
+
+.ppStaticMenu {
+    color: #22bba8;
+}
+
+.ppStaticMenu a {
+  text-decoration: none;
+  color: #22bba8;
+}
+
+@media only screen and (max-width: 768px) {
+    b {
+        font-size: 20px;
+    }
+}
+
+@media only screen and (max-width: 320px) {
+    b {
+        font-size: 10px;
+    }
+}
