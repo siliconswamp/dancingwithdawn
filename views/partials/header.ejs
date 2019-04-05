@@ -1,6 +1,8 @@
 <div class="navbar">
     <img src="images/DanceWithDawn.png" alt="Dance with Dawn" height="128">
-    <a href="#">Signed In As <%= currentUser.username %></a>
+    <% if(currentUser){ %>
+        <a href="#">Signed In As <%= currentUser.username %></a>
+    <% } %>
     <div class="dropdown" style="text-align: left" style="position: relative;">
         <button class="dropbtn" style="position: absolute; top: 80px; right: 0;">
             <img src="images/menu.png" height="32">
