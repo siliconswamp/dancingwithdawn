@@ -61,6 +61,7 @@ angular.module('home_collections').controller('HomeController', ['$scope', 'Home
             $scope.update_text = function() {
                 Home.update_text($scope.updated_text);
                 alert("updated");
+                location.reload();
                 $scope.admin_features.sort();
                 $scope.display = {show:0};
             };

@@ -1,7 +1,7 @@
 angular.module('faq_collections').controller('FAQController', ['$scope', 'FAQ',
     function($scope, FAQ) {
 
-        $scope.faq_text = {};
+        $scope.faq_text = [];
         FAQ.faq_text().then(function(response) {
             $scope.faq_text = response.data;
         }, function(error) {
@@ -85,6 +85,7 @@ angular.module('faq_collections').controller('FAQController', ['$scope', 'FAQ',
 
                 FAQ.updateFAQData($scope.updatedFAQ);
                 alert("updated");
+                location.reload();
                 $scope.faq_text.sort();
                 $scope.display = {show:0};
                 $scope.add = {show:0};
@@ -102,21 +103,17 @@ angular.module('faq_collections').controller('FAQController', ['$scope', 'FAQ',
             $scope.sendNewFAQ = function() {
                 $scope.newFAQ.order = $scope.faq_text.length;
                 FAQ.addFAQData($scope.newFAQ);
-                $scope.faq_text.add($scope.newFAQ);
+                $scope.faq_text.push($scope.newFAQ);
                 $scope.faq_text.sort();
                 alert("added");
-                $scope.faq_text.push($scope.newFAQ);
-            };
+                $scope.display = {show:0};
+                $scope.add = {show:0};
 
-            $scope.display = {show:0};
-            $scope.add = {show:0};
-        };
-
-        $scope.contact_form = function() {
-            $scope.contact = {
-                name:"Your name...",
-                email:"Your email address...",
-                message:"Message..."
+                $scope.newFAQ = {
+                    order: 0,
+                    question: "",
+                    answer: ""
+                };
             };
         };
     }
