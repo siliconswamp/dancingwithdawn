@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <title>Home Page</title>
     <link rel="stylesheet" href="styles/main.css">
-    <link rel="icon" href="images\logo_nowords.png" type="image/png">
+    <link rel="icon" href="images/logo_nowords.png" type="image/png">
 </head>
 <body ng-app="home_app">
 <div class="content">
@@ -79,7 +79,7 @@
                     <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d8246.649597889767!2d-82.32316375859479!3d29.653385801096295!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sus!4v1553457242523" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen></iframe>
                 </div>
             </div>
-            <div class="contactform" ng-app ng-controller="contact_form">
+            <div name="contactform" class="contactform" ng-app ng-controller="contact_form">
                 <label for="contactname">Name</label>
                 <input ng-model="contact.name" type="text" id="contactname" name="contactname" onClick="this.setSelectionRange(0, this.value.length)">
                 <label for="contactemail">Email</label>

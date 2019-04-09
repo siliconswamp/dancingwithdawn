@@ -21,6 +21,11 @@ angular.module('home_collections').controller('HomeController', ['$scope', 'Home
             var contactInfo = $scope.contact;
             $scope.send = function () {
                 Home.contact_form(contactInfo);
+                $scope.contact = {
+                    name: "Your name...",
+                    email: "Your email address...",
+                    message: "Message..."
+                };
                 alert("message sent");
             };
         };

@@ -5,13 +5,18 @@ var User = require("../models/user");
 
 // Render home page
 router.get("/", function(req, res){
-    res.render("index", {page: 'index'}); 
- });
+    res.render("index", {page: 'index'});
+});
 
  // Render home page
 router.get("/index", function(req, res){
     res.render("index", {page: 'index'}); 
  });
+
+// Render contact page
+router.get("/contact", function(req, res){
+    res.render("contact", {page: 'contact'});
+});
 
  // Render about me page
 router.get("/aboutme", function(req, res){
