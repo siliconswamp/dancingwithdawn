@@ -10,8 +10,10 @@
 <body ng-app="home_app">
 <div class="content">
     <div ng-controller="HomeController">
-        <div>
-            <div name="contactform" class="contactform" ng-app ng-controller="contact_form">
+        <div style="text-align: center;">
+            <h2>Send a Message</h2>
+            <h4>Please send a message for more information on classes or if you have any questions!</h4>
+            <div name="contactform" class="contactform" ng-app ng-controller="contact_form" style="width: 50%; display:inline-block;">
                 <label for="contactname">Name</label>
                 <input ng-model="contact.name" type="text" id="contactname" name="contactname" onClick="this.setSelectionRange(0, this.value.length)">
                 <label for="contactemail">Email</label>
@@ -23,6 +25,7 @@
         </div>
     </div>
 </div>
+</br></br>
 <div id="footer"></div>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
