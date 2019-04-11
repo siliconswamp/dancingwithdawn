@@ -27,8 +27,10 @@
 <div id="ppStaticMenu"></div>
 <div style="float:right; width: 100%">
                         <h1>Settings for <%= currentUser.username %></h1>
-						<h1>Settings for <%= currentUser.first_name %></h1>
-						<h1>Settings for <%= currentUser.last_name %></h1>
+						<h1>Name: <%= currentUser.first_name %> <%= currentUser.last_name %></h1>
+						<h1>Address: <%= currentUser.street %> </h1>
+						<h1>         <%= currentUser.city %>, <%= currentUser.state %> <%= currentUser.zip %> </h1>
+						
                        
 </div>
 
