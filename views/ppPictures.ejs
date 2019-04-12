@@ -27,9 +27,10 @@
     </div>
 </div>
 
-<div id="ppStaticMenu"></div>
-<div style="float:right; width: 100%; padding-right: 20px">
-                        <h1>Pictures</h1>
+<div id="ppStaticMenu" style="float:right; width: 100%"></div>
+<!-- <div style="float:right; width: 100%; padding-right: 20px"> -->
+    
+<h1>Pictures</h1>
                        
 </div>
 
@@ -38,9 +39,27 @@
 
         </div>
 
-        <div id="foto">
+        <div id="foto" style="margin-top: 50px; display: inline-block">
         
         </div>
+
+        <div>
+
+            <input
+              type="hidden"
+              name="avatar"
+              role="uploadcare-uploader"
+              data-multiple="true"
+              data-multiple-min="1" >
+
+        </div>
+
+    <script>
+      UPLOADCARE_PUBLIC_KEY = 'ed80130d4b7b3182afd0';
+      UPLOADCARE_IMAGES_ONLY = true;
+      UPLOADCARE_CLEARABLE = true;
+    </script>
+
 
 
 <div id="footer"></div>

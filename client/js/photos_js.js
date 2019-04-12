@@ -14,7 +14,7 @@ $.ajax(settings).done(function (response) {
   let imgArray = new Array(response.results.length);
   for(var i = 0; i < response.results.length; i++){
   
-  imgArray[i] = "https://ucarecdn.com/" + response.results[i].uuid + "/-/scale_crop/300x200/-/quality/best/";
+  imgArray[i] = "https://ucarecdn.com/" + response.results[i].uuid + "/-/stretch/on/-/resize/300x245/-/quality/best/";
 
 }
 
@@ -23,7 +23,7 @@ $.ajax(settings).done(function (response) {
 var container = document.getElementById("wrapper");
 
 for( i=0; i<response.results.length; i++){
-  //container.insertAdjacentHTML('beforeend', '<img src="'+imgArray[i]+'">');
+  
 
   var img = document.createElement("img");
 img.src = imgArray[i];
@@ -31,15 +31,6 @@ img.src = imgArray[i];
 var src = document.getElementById("foto");
 src.appendChild(img);
 
-//   var img = new Image();
-// var div = document.getElementByClassName('x');
- 
- 
-// img.onload = function() {
- 
-//   div.innerHTML += '<img src="'+imgArray[i]+'" />'; 
- 
-// };
 }
 
 
