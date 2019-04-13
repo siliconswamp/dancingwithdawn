@@ -8,9 +8,10 @@
     <link rel="icon" href="images/logo_nowords.png" type="image/png">
 </head>
 <body>
+<div style= "position: fixed; left: 50px; top: 200px">
 <h1>Login</h1>
 
-<form action="/login" method="POST" style= "position: fixed; left: 50px; top: 200px">
+<form action="/login" method="POST">
     <input type="text" name="username" placeholder="username" style="width:150px">
     <input type="password" name="password" placeholder="password" style="width:150px">
     <button>Login</button>
@@ -19,6 +20,7 @@
 <li><a href="/register">Sign Up!</a></li>
 <li><a href="/login">Login!</a></li>
 <li><a href="/logout">Logout!</a></li>
+</div>
 <div id="footer" style ="position: absolute; bottom:0; left:0; height:100px; width: 100%"></div>
 <script src="js/scripts/content.js"></script>
 </body>
