@@ -7,7 +7,9 @@
     <link rel="stylesheet" href="styles/main.css">
     <link rel="icon" href="images/logo_nowords.png" type="image/png">
 </head>
-<body ng-app="home_app">
+<body ng-app="home_app" style="margin-bottom:120px">
+
+<div id="ppStaticMenu"></div>
 <div class="content">
     <div ng-controller="HomeController">
         <div>
@@ -21,7 +23,7 @@
 				<br>
             </div>
 			
-			<div style="text-align: left;position:absolute, right;">
+			<div style="text-align: left;position:fixed; right: 0px;">
 			<h1>Settings for <%= currentUser.username %></h1>
 			<h1>Name: <%= currentUser.first_name %> <%= currentUser.last_name %></h1>
 			<h1>Address: <%= currentUser.street %>, <%= currentUser.city %>, <%= currentUser.state %> <%= currentUser.zip %> </h1>
@@ -35,9 +37,9 @@
     </div>
 </div>
 
-<div id="ppStaticMenu"></div>
 
-<div id="footer"></div>
+
+<div id="footer" style ="position: absolute; bottom:0; left:0; height:100px; width: 100%"></div>
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
