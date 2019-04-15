@@ -1,18 +1,18 @@
 <div class="navbar">
     <a href="/parentportal"><img src="images/DanceWithDawn.png" alt="Dance with Dawn" height="128"></a>
+	<a href="#">Signed In As <%= currentUser.username %></a>
     <div class="dropdown" style="text-align: left" style="position: relative;">
-        <a href="#">Signed In As <%= currentUser.username %></a>
+        
         <button class="dropbtn" style="position: absolute; top: 80px; right: 0;">
             <img src="images/menu.png" height="32">
             <i class="fa fa-caret-down"></i>
         </button>
         <div class="dropdown-content"  style="right: 0;">
-            <a href="/index"> Home </a>
+            <a href="/index"> Home Page </a>
             <a href="/ppSettings"> Settings </a>
 			<a href="/ppPictures"> Pictures </a>
-			<a href="/ppHistory"> Account History</a>
 			<a href="/ppForms"> Forms </a>
-			<a href="/paypal-temp">Paypal</a>
+			<a href="/paypal-temp"> Pay For Classes</a>
             <a href="/parentportal"> Parent Portal Home </a>
             <a href="/logout">Logout</a>
         </div>
