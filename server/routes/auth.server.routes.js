@@ -34,8 +34,8 @@ router.get("/admin_text", function(req, res){
 });
 
 // Render admin portal editing page
-router.get("/adminportal", function(req, res){
-    res.render("adminportal", {page: 'adminportal'}); 
+router.get("/admin_portal", function(req, res){
+    res.render("admin_portal", {page: 'admin_portal'});
 });
 
 // Render calendar page
@@ -64,8 +64,8 @@ router.get("/paypal-temp", function(req, res){
 });
 
 // Render photo admin page
-router.get("/photos_admin", function(req, res){
-    res.render("photos_admin", {page: 'photos_admin'}); 
+router.get("/admin_photos", function(req, res){
+    res.render("admin_photos", {page: 'admin_photos'});
 });
 
 // Render photo test page
@@ -79,13 +79,13 @@ router.get("/photos", function(req, res){
 });
 
 // Render parent portal forms page
-router.get("/ppForms", function(req, res){
-    res.render("ppForms", {page: 'ppForms'}); 
+router.get("/parent_forms", function(req, res){
+    res.render("parent_forms", {page: 'parent_forms'});
 });
 
 // Render parent portal history page
-router.get("/ppHistory", function(req, res){
-    res.render("ppHistory", {page: 'ppHistory'}); 
+router.get("/parent_history", function(req, res){
+    res.render("parent_history", {page: 'parent_history'});
 });
 
 // Render parent portal pictures admins page
@@ -94,18 +94,18 @@ router.get("/ppPictures_admin", function(req, res){
 });
 
 // Render parent portal pictures page
-router.get("/ppPictures", function(req, res){
-    res.render("ppPictures", {page: 'ppPictures'}); 
+router.get("/parent_pictures", function(req, res){
+    res.render("parent_pictures", {page: 'parent_pictures'});
 });
 
 // Render parent portal forms page
-router.get("/ppSettings", function(req, res){
-    res.render("ppSettings", {page: 'ppSettings'}); 
+router.get("/parent_settings", function(req, res){
+    res.render("parent_settings", {page: 'parent_settings'});
 });
 
 // Render parent portal
-router.get("/parentportal", function(req, res){
-    res.render("parentportal", {page: 'parentportal'}); 
+router.get("/parent_portal", function(req, res){
+    res.render("parent_portal", {page: 'parent_portal'});
  });
 
 // show register form
