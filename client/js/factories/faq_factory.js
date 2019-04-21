@@ -1,8 +1,8 @@
 angular.module('faq_collections', []).factory('FAQ', function($http) {
     var collections = {
         faq_text: function(){
-            //return $http.get('http://localhost:8080/api/faq/');
-            return $http.get('https://dancingwithdawn.herokuapp.com/api/faq/');
+            return $http.get('http://localhost:8080/api/faq/');
+            //return $http.get('https://dancingwithdawn.herokuapp.com/api/faq/');
         },
 
         updateFAQData: function(faq_detail){
