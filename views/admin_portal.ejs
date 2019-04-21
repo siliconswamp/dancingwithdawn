@@ -3,16 +3,60 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Portal</title>
+    <title>Admin Portal</title>
     <link rel="stylesheet" href="styles/main.css">
     <link rel="icon" href="images/logo_nowords.png" type="image/png">
 </head>
-<body>
-<div>
-    <h2>To be completed......</h2>
+<body ng-app="home_app" style = "margin-bottom: 120px; text-align: center;">
+<div class="content">
+    <div ng-controller="HomeController">
+        <div>
+            </br>
+            <div style="display: inline-block; align-content: center;">
+                <div style="color:#636363; text-align: center; float: right; padding-right: 200px; font-variant: small-caps; vertical-align: center"  width="500" height="200">
+                    <h1 style="clear: left; margin-bottom: 0px">Dance With Dawn</h1>
+                    <h5 style="margin-top: 0px; color: #969696;">Kids Dance & Theatre Classes Filled With Love & Joy</h5>
+                </div>
+                <img style="float: right;" src="images/logo_nowords.png" height="100">
+            </div>
+        </div>
+        <div>
+            <label for="important_news" style="font-weight: bold; font-size: large;font-variant: small-caps;">Important News</label></br>
+            <label class="pageContent" id="important_news">{{(admin_features | filter:{type:'ppNews'})[0].message}}</label></br></br></br>
+            <label for="event_calendar" style="font-weight: bold; font-size: large;font-variant: small-caps;">Upcoming Events</label>
+            <table id="event_calendar"  style="margin:0 auto;" class="blueTable">
+                <tr>
+                    <th>Event</th>
+                    <th>Start Date</th>
+                    <th>Start Time</th>
+                </tr>
+                <tr ng-repeat="event in filtered_events">
+                    <td>{{event.summary}}</td>
+                    <td>{{event.start.dateTime | date:'MM/dd/yyyy'}}</td>
+                    <td>{{event.start.dateTime | date:'h:mm a'}}</td>
+                </tr>
+            </table></br></br>
+            <label for="page_links" style="font-weight: bold; font-size: large;font-variant: small-caps;">Page Links</label></br>
+            <label>Application Links</label></br>
+            <a href="admin_photos">Add Photos</a></br>
+            <a href="admin_faq">Update FAQ</a></br>
+            <a href="admin_text">Edit Portal Text</a></br></br>
+            <label>External Links</label></br>
+            <a href="https://calendar.google.com">Google Calendar</a></br>
+            <a href="https://drive.google.com/drive/u/2/my-drive">Google Drive</a></br>
+            <a href="https://uploadcare.com/accounts/login/">Photo Application</a>
+            </br></br>
+        </div>
+    </div>
 </div>
 <div id="footer"></div>
-</body>
-</html>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+<script src="https://code.angularjs.org/1.4.3/angular.js"></script>
+<script src="js/app.js"></script>
+<script src="js/factories/home_factory.js"></script>
+<script src="js/controllers/home_controller.js"></script>
 <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
 <script src="js/scripts/content.js"></script>
+</body>
+</html>
