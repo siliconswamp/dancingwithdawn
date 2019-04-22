@@ -9,6 +9,8 @@
             <i class="fa fa-caret-down"></i>
         </button>
         <div class="dropdown-content"  style="right: 0;">
+<<<<<<< HEAD
+=======
             <a href="/index"> Home </a>
             <a href="/faq">QA Page</a>
             <a href="/admin_faq">Admin QA Page</a>
@@ -19,11 +21,45 @@
             <a href="/admin_text">Admin Text</a>
             <a href="/admin_photos">Admin Photos</a>
             <a href="/contact">Contact Me</a>
+>>>>>>> master
             <% if(!currentUser){ %>
+                <a href="/index"> Home </a>
+                <a href="/faq">QA Page</a>
+                <a href="/aboutme">Meet Me</a>
+                <a href="/calendar">Calendar</a>
+                <a href="/forms">Forms</a>            
+                <a href="/lessons">My Lessons</a>
+                <a href="/contact">Contact Me</a>
                 <a href="/login">Login</a>
                 <a href="/register">Sign Up!</a>
             <% } else { %>
-                <a href="/logout">Logout</a>
+                <% if(currentUser.isAdmin){ %>
+                    <a href="/index"> Home </a>
+                    <a href="/faq">QA Page</a>
+                    <a href="/aboutme">Meet Me</a>
+                    <a href="/calendar">Calendar</a>
+                    <a href="/forms">Forms</a>            
+                    <a href="/lessons">My Lessons</a>
+                    <a href="/contact">Contact Me</a>
+                    <a href="/admin_faq">Admin QA Page</a>
+                    <a href="/admin_text">Admin Text</a>
+                    <a href="/photos_admin">Admin Photos</a>
+                    <a href="/logout">Logout</a>
+                <% } else { %>
+                    <a href="/index"> Home </a>
+                    <a href="/faq">QA Page</a>
+                    <a href="/aboutme">Meet Me</a>
+                    <a href="/calendar">Calendar</a>
+                    <a href="/forms">Forms</a>            
+                    <a href="/lessons">My Lessons</a>
+                    <a href="/contact">Contact Me</a>
+                    <a href="/ppSettings"> Settings </a>
+                    <a href="/ppPictures"> Pictures </a>
+                    <a href="/ppForms"> Forms </a>
+                    <a href="/paypal-temp"> Pay For Classes</a>
+                    <a href="/parentportal"> Parent Portal Home </a>
+                    <a href="/logout">Logout</a>
+                <% } %>
             <% } %>
         </div>
     </div>
