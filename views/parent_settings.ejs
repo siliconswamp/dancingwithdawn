@@ -13,23 +13,115 @@
         <div>
             </br>
 			<div>
-			<h3>Settings for <%= currentUser.username %></h3>
-			<h3>Name: <%= currentUser.first_name %> <%= currentUser.last_name %></h3>
-			<h3>Address: <%= currentUser.street %>, <%= currentUser.city %>, <%= currentUser.state %> <%= currentUser.zip %> </h3>
-			<h3>Cell #: <%= currentUser.cell_number %></h3>
-			<h3>Phone #: <%= currentUser.alt_number %></h3>
-			<h3>E-mail: <%= currentUser.email %></h3>
-			<h3>Relationship: <%= currentUser.relationship %></h3>
+                Settings for: <label> <%= currentUser.username %></label></br></br>
+                Name: <label> <%= currentUser.first_name %> <%= currentUser.last_name %></label></br></br>
+                Address: <label> <%= currentUser.street %>, <%= currentUser.city %>, <%= currentUser.state %> <%= currentUser.zip %></label></br></br>
+                Cell #:<label class="phone"> <%= currentUser.cell_number %></label></br></br>
+                Phone #:<label class="phone"> <%= currentUser.alt_number %></label></br></br>
+                Email: <label> <%= currentUser.email %></label></br>
 			</div>
-          
+        </div></br></br>
+        <div class="button" ng-click="update_area=true">Update Information?</div></br></br>
+        <div ng-show="update_area">
+            <div name="parentform" ng-app ng-controller="parent_info">
+            <table>
+                <tr>
+                    <td><label ng-model="parent.firstname" for="firstname">First Name</label></td>
+                    <td><input placeholder="<%= currentUser.first_name %>" style="width: 200px;" type="text"></td>
+                </tr>
+                <tr>
+                    <td><label ng-model="parent.lastname" for="lastname">Last Name</label></td>
+                    <td><input placeholder="<%= currentUser.last_name %>" style="width: 200px;" id="lastname" type="text"></td>
+                </tr>
+                <tr>
+                    <td><label ng-model="parent.streetname" for="streetname">Street</label></td>
+                    <td><input placeholder="<%= currentUser.street %>" style="width: 200px;" id="streetname" type="text"></td>
+                </tr>
+                <tr>
+                    <td><label ng-model="parent.city" for="city">City</label></td>
+                    <td><input placeholder="<%= currentUser.city %>" style="width: 200px;" id="city" type="text"></td>
+                </tr>
+                <tr>
+                    <td><label for="state">State</label></td>
+                    <td><select style="width: 150px;" id="state">
+                            <option value="" selected disabled hidden><%= currentUser.state %></option>
+                            <option value="AL">Alabama</option>
+                            <option value="AK">Alaska</option>
+                            <option value="AZ">Arizona</option>
+                            <option value="AR">Arkansas</option>
+                            <option value="CA">California</option>
+                            <option value="CO">Colorado</option>
+                            <option value="CT">Connecticut</option>
+                            <option value="DE">Delaware</option>
+                            <option value="DC">District Of Columbia</option>
+                            <option value="FL">Florida</option>
+                            <option value="GA">Georgia</option>
+                            <option value="HI">Hawaii</option>
+                            <option value="ID">Idaho</option>
+                            <option value="IL">Illinois</option>
+                            <option value="IN">Indiana</option>
+                            <option value="IA">Iowa</option>
+                            <option value="KS">Kansas</option>
+                            <option value="KY">Kentucky</option>
+                            <option value="LA">Louisiana</option>
+                            <option value="ME">Maine</option>
+                            <option value="MD">Maryland</option>
+                            <option value="MA">Massachusetts</option>
+                            <option value="MI">Michigan</option>
+                            <option value="MN">Minnesota</option>
+                            <option value="MS">Mississippi</option>
+                            <option value="MO">Missouri</option>
+                            <option value="MT">Montana</option>
+                            <option value="NE">Nebraska</option>
+                            <option value="NV">Nevada</option>
+                            <option value="NH">New Hampshire</option>
+                            <option value="NJ">New Jersey</option>
+                            <option value="NM">New Mexico</option>
+                            <option value="NY">New York</option>
+                            <option value="NC">North Carolina</option>
+                            <option value="ND">North Dakota</option>
+                            <option value="OH">Ohio</option>
+                            <option value="OK">Oklahoma</option>
+                            <option value="OR">Oregon</option>
+                            <option value="PA">Pennsylvania</option>
+                            <option value="RI">Rhode Island</option>
+                            <option value="SC">South Carolina</option>
+                            <option value="SD">South Dakota</option>
+                            <option value="TN">Tennessee</option>
+                            <option value="TX">Texas</option>
+                            <option value="UT">Utah</option>
+                            <option value="VT">Vermont</option>
+                            <option value="VA">Virginia</option>
+                            <option value="WA">Washington</option>
+                            <option value="WV">West Virginia</option>
+                            <option value="WI">Wisconsin</option>
+                            <option value="WY">Wyoming</option>
+                        </select></td>
+                </tr>
+                <tr>
+                    <td><label ng-model="parent.zip" for="zip">Zip</label></td>
+                    <td><input placeholder="<%= currentUser.zip %>" style="width: 200px;" id="zip" type="text"></td>
+                </tr>
+                <tr>
+                    <td><label ng-model="parent.cell" for="cell">Cell Number</label></td>
+                    <td><input placeholder="<%= currentUser.cell_number %>" style="width: 200px;" id="cell" type="tel"></td>
+                </tr>
+                <tr>
+                    <td><label ng-model="parent.alt" for="alt">Alt Number</label></td>
+                    <td><input placeholder="<%= currentUser.alt_number %>" style="width: 200px;" id="alt" type="tel"></td>
+                </tr>
+                <tr>
+                    <td><label ng-model="parent.email" for="email">Email Address</label></td>
+                    <td><input placeholder="<%= currentUser.email %>" style="width: 200px;" id="email" type="email"></td>
+                </tr>
+            </table>
+            <div class="button" ngclick="update_parent(parent);">Submit</div>
+            </div>
         </div>
     </div>
 </div>
 
-
-
-<div id="footer" style ="position: absolute; bottom:0; left:0; height:100px; width: 100%"></div>
-
+<div id="footer" style ="position: fixed; bottom:0; width: 100%"></div>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
 <script src="https://code.angularjs.org/1.4.3/angular.js"></script>
@@ -38,5 +130,11 @@
 <script src="js/controllers/home_controller.js"></script>
 <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
 <script src="js/scripts/content.js"></script>
+<script>
+    $(".phone").text(function(i, text) {
+        text = text.replace(/(\d{3})(\d{3})(\d{4})/, "($1)-$2-$3");
+        return text;
+    });
+</script>
 </body>
 </html>
