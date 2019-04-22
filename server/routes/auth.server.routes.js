@@ -126,7 +126,7 @@ router.post("/register", function(req, res){
         }
         passport.authenticate("local")(req, res, function(){
            req.flash("success", "Successfully Signed Up! Nice to meet you " + req.body.username);
-           res.redirect("/parentportal"); 
+           res.redirect("/parent_portal"); 
         });
     });
 });
@@ -139,7 +139,7 @@ router.get("/login", function(req, res){
 //handling login logic
 router.post("/login", passport.authenticate("local", 
     {
-        successRedirect: "/parentportal",
+        successRedirect: "/parent_portal",
         failureRedirect: "/login",
         failureFlash: true,
         successFlash: 'Successful Login'
