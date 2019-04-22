@@ -8,7 +8,8 @@ var path = require('path'),
     config = require('./config'),
     User = require("../models/user"),
     LocalStrategy = require("passport-local"),
-    passportLocalMongoose = require("passport-local-mongoose");
+    passportLocalMongoose = require("passport-local-mongoose"),
+    cors = require('cors');
     
     
   // Routes
