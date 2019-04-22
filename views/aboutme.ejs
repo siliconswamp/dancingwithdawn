@@ -10,11 +10,12 @@
 </head>
 <body ng-app="home_app">
 <div class="content">
-<div ng-controller="HomeController">
-    <h4>Meet Me</h4>
-    <label class="pageContent">{{(admin_features | filter:{type:'meet_me'})[0].header}}</label>
-    <label class="pageContent">{{(admin_features | filter:{type:'meet_me'})[0].header2}}</label>
-    <label class="pageContent">{{(admin_features | filter:{type:'meet_me'})[0].message}}</label>
+<div ng-controller="HomeController" style="text-align: center;">
+    <h3>Meet Me</h3>
+    <div><img style="width: 200px;border-radius: 8px;" src="images/meet_me.png"/></div>
+    <h5 class="pageContent">{{(admin_features | filter:{type:'meet_me'})[0].header}}</h5>
+    <label class="pageContent">{{(admin_features | filter:{type:'meet_me'})[0].header2}}</label></br></br>
+    <label class="pageContent" style="display: inline-block; width: 50%;">{{(admin_features | filter:{type:'meet_me'})[0].message}}</label></br></br>
 </div>
 </div>
 <div id="footer"></div>

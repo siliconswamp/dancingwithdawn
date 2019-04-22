@@ -1,0 +1,201 @@
+{
+  "kind": "calendar#events",
+  "etag": "\"p330cj2u7n3ge20g\"",
+  "summary": "dancingwithdawn352@gmail.com",
+  "updated": "2019-04-21T05:22:14.776Z",
+  "timeZone": "America/New_York",
+  "accessRole": "reader",
+  "defaultReminders": [],
+  "nextSyncToken": "CMDJi8e44OECEAAYAQ==",
+  "items": [
+    {
+      "kind": "calendar#event",
+      "etag": "\"3105844179024000\"",
+      "id": "5ssv9mhcku164le8h2ua2jnj59",
+      "status": "confirmed",
+      "htmlLink": "https://www.google.com/calendar/event?eid=NXNzdjltaGNrdTE2NGxlOGgydWEyam5qNTkgZGFuY2luZ3dpdGhkYXduMzUyQG0",
+      "created": "2019-03-18T15:14:49.000Z",
+      "updated": "2019-03-18T15:14:49.512Z",
+      "summary": "Something Going Down",
+      "location": "Gainesville, FL, USA",
+      "creator": {
+        "email": "dancingwithdawn352@gmail.com",
+        "self": true
+      },
+      "organizer": {
+        "email": "dancingwithdawn352@gmail.com",
+        "self": true
+      },
+      "start": {
+        "dateTime": "2019-03-19T16:30:00-04:00"
+      },
+      "end": {
+        "dateTime": "2019-03-19T17:30:00-04:00"
+      },
+      "visibility": "public",
+      "iCalUID": "5ssv9mhcku164le8h2ua2jnj59@google.com",
+      "sequence": 0,
+      "extendedProperties": {
+        "private": {
+          "everyoneDeclinedDismissed": "-1"
+        }
+      }
+    },
+    {
+      "kind": "calendar#event",
+      "etag": "\"3105844213396000\"",
+      "id": "223u7rfp0np83bcputd2uqmtjd",
+      "status": "confirmed",
+      "htmlLink": "https://www.google.com/calendar/event?eid=MjIzdTdyZnAwbnA4M2JjcHV0ZDJ1cW10amQgZGFuY2luZ3dpdGhkYXduMzUyQG0",
+      "created": "2019-03-18T15:15:06.000Z",
+      "updated": "2019-03-18T15:15:06.698Z",
+      "summary": "Dancing with Dawn",
+      "creator": {
+        "email": "dancingwithdawn352@gmail.com",
+        "self": true
+      },
+      "organizer": {
+        "email": "dancingwithdawn352@gmail.com",
+        "self": true
+      },
+      "start": {
+        "dateTime": "2019-03-21T16:30:00-04:00"
+      },
+      "end": {
+        "dateTime": "2019-03-21T17:30:00-04:00"
+      },
+      "iCalUID": "223u7rfp0np83bcputd2uqmtjd@google.com",
+      "sequence": 0,
+      "extendedProperties": {
+        "private": {
+          "everyoneDeclinedDismissed": "-1"
+        }
+      }
+    },
+    {
+      "kind": "calendar#event",
+      "etag": "\"3105939324380000\"",
+      "id": "44lqf7t2dgjaqfhtt9v8et2qas",
+      "status": "confirmed",
+      "htmlLink": "https://www.google.com/calendar/event?eid=NDRscWY3dDJkZ2phcWZodHQ5djhldDJxYXMgZGFuY2luZ3dpdGhkYXduMzUyQG0",
+      "created": "2019-03-19T04:27:42.000Z",
+      "updated": "2019-03-19T04:27:42.190Z",
+      "summary": "guest check",
+      "location": "Rome, Metropolitan City of Rome, Italy",
+      "creator": {
+        "email": "dancingwithdawn352@gmail.com",
+        "self": true
+      },
+      "organizer": {
+        "email": "dancingwithdawn352@gmail.com",
+        "self": true
+      },
+      "start": {
+        "date": "2019-03-22"
+      },
+      "end": {
+        "date": "2019-03-23"
+      },
+      "transparency": "transparent",
+      "iCalUID": "44lqf7t2dgjaqfhtt9v8et2qas@google.com",
+      "sequence": 0,
+      "attendees": [
+        {
+          "email": "dancingwithdawn352@gmail.com",
+          "organizer": true,
+          "self": true,
+          "responseStatus": "accepted"
+        }
+      ],
+      "extendedProperties": {
+        "private": {
+          "everyoneDeclinedDismissed": "-1"
+        }
+      },
+      "guestsCanModify": true,
+      "attachments": [
+        {
+          "fileUrl": "https://drive.google.com/file/d/1Y3q6vkwx6sWqIP-VKl5vAwzCQM-G_YAw/view?usp=drive_web",
+          "title": "middle_earth.jpg",
+          "iconLink": "https://ssl.gstatic.com/docs/doclist/images/icon_10_generic_list.png",
+          "fileId": "1Y3q6vkwx6sWqIP-VKl5vAwzCQM-G_YAw"
+        }
+      ]
+    },
+    {
+      "kind": "calendar#event",
+      "etag": "\"3106957804742000\"",
+      "id": "1kvpn5eckctrgjd0nf0uk66g5r",
+      "status": "confirmed",
+      "htmlLink": "https://www.google.com/calendar/event?eid=MWt2cG41ZWNrY3RyZ2pkMG5mMHVrNjZnNXIgZGFuY2luZ3dpdGhkYXduMzUyQG0",
+      "created": "2019-03-25T01:55:02.000Z",
+      "updated": "2019-03-25T01:55:02.371Z",
+      "summary": "Updates in Live Time",
+      "creator": {
+        "email": "dancingwithdawn352@gmail.com",
+        "self": true
+      },
+      "organizer": {
+        "email": "dancingwithdawn352@gmail.com",
+        "self": true
+      },
+      "start": {
+        "date": "2019-03-28"
+      },
+      "end": {
+        "date": "2019-03-29"
+      },
+      "transparency": "transparent",
+      "iCalUID": "1kvpn5eckctrgjd0nf0uk66g5r@google.com",
+      "sequence": 0,
+      "extendedProperties": {
+        "private": {
+          "everyoneDeclinedDismissed": "-1"
+        }
+      }
+    },
+    {
+      "kind": "calendar#event",
+      "etag": "\"3108949969204000\"",
+      "id": "10jb5n0lr8579r76gdt4fm5urv",
+      "status": "confirmed",
+      "htmlLink": "https://www.google.com/calendar/event?eid=MTBqYjVuMGxyODU3OXI3NmdkdDRmbTV1cnYgZGFuY2luZ3dpdGhkYXduMzUyQG0",
+      "created": "2019-04-05T14:32:55.000Z",
+      "updated": "2019-04-05T14:36:24.602Z",
+      "summary": "First Class",
+      "description": "\u003cb\u003e\u003cu\u003e**Click more details!** \u003c/u\u003e\u003c/b\u003eAll parents must fill out this form before students can participate!",
+      "location": "4 Yawkey Way, Nantucket, MA 02554, USA",
+      "creator": {
+        "email": "dancingwithdawn352@gmail.com",
+        "self": true
+      },
+      "organizer": {
+        "email": "dancingwithdawn352@gmail.com",
+        "self": true
+      },
+      "start": {
+        "dateTime": "2019-05-19T10:00:00-04:00"
+      },
+      "end": {
+        "dateTime": "2019-05-19T11:30:00-04:00"
+      },
+      "transparency": "transparent",
+      "iCalUID": "10jb5n0lr8579r76gdt4fm5urv@google.com",
+      "sequence": 1,
+      "extendedProperties": {
+        "private": {
+          "everyoneDeclinedDismissed": "-1"
+        }
+      },
+      "guestsCanSeeOtherGuests": false,
+      "attachments": [
+        {
+          "fileUrl": "https://drive.google.com/file/d/1lPJSeDktaJY_ZQO4FNeD0ZbiYaMh92ZO/view?usp=drive_web",
+          "title": "sign-up-sheet.pdf",
+          "iconLink": "https://ssl.gstatic.com/docs/doclist/images/icon_10_generic_list.png",
+          "fileId": "1lPJSeDktaJY_ZQO4FNeD0ZbiYaMh92ZO"
+        }
+      ]
+    }
+  ]
+}
