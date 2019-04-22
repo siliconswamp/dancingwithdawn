@@ -7,6 +7,7 @@ var path = require('path'),
     flash = require("connect-flash"),
     config = require('./config'),
     User = require("../models/user"),
+    favicon = require('serve-favicon'),
     LocalStrategy = require("passport-local"),
     passportLocalMongoose = require("passport-local-mongoose");
     
@@ -26,6 +27,8 @@ module.exports.init = function() {
 
   //initialize app
   var app = express();
+
+  app.use('/favicon.ico', express.static('C:\\Users\\ragbayani\\Documents\\Personal\\School\\CEN3031\\DD\\server\\config\\public\\images\\favicon.ico'));
 
   // Enable EJS
   app.set('view engine', 'ejs');
