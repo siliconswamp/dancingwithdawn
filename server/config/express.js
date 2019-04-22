@@ -28,7 +28,7 @@ module.exports.init = function() {
   //initialize app
   var app = express();
 
-  app.use('/favicon.ico', express.static('../../client/images/favicon.ico'));
+  app.use(favicon(path.join(__dirname,'public','images','favicon.ico')));
 
   // Enable EJS
   app.set('view engine', 'ejs');
