@@ -12,11 +12,14 @@ var path = require('path'),
     
     
   // Routes
-  var portalRouter = require('../routes/portal.server.routes'),
-      homeRouter = require('../routes/home.server.routes'),
-      faqRouter = require('../routes/faq.server.routes');
-      authRouter = require("../routes/auth.server.routes");
+var portalRouter = require('../routes/portal.server.routes'),
+    homeRouter = require('../routes/home.server.routes'),
+    faqRouter = require('../routes/faq.server.routes');
+    authRouter = require("../routes/auth.server.routes");
 
+const corsOptions = {
+    origin: 'http://dancingwithdawn.herokuapp.com/'
+}
 
 module.exports.init = function() {
   // assign mongoose promise library and connect to database
@@ -62,12 +65,7 @@ module.exports.init = function() {
   });
 
   // CORS Fix
-  app.use(function(req, res, next) {
-    res.header("Access-Control-Allow-Origin", "http://dancingwithdawn.herokuapp.com/");
-    res.header("Vary", "Origin");
-    res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
-    next();
-  });
+  app.use(cors(corsOptions))
 
   /**TODO
    Serve static files */
