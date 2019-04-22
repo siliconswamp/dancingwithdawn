@@ -139,12 +139,17 @@ router.get("/login", function(req, res){
 //handling login logic
 router.post("/login", passport.authenticate("local", 
     {
-        successRedirect: "/parent_portal",
         failureRedirect: "/login",
-        failureFlash: true,
-        successFlash: 'Successful Login'
-    }), function(req, res){
-});
+    }), (req, res) => {
+        if (req.user.isAdmin === true) {
+          res.redirect("/admin_portal");
+        }
+        if (req.user.isAdmin === false) {
+          res.redirect("/parent_portal");
+        }
+    });
+
+
 
 // logout route
 router.get("/logout", function(req, res){
