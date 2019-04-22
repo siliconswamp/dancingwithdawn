@@ -3,38 +3,38 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Parent Portal</title>
+    <title>Admin Portal</title>
     <link rel="stylesheet" href="styles/main.css">
     <link rel="icon" href="images/logo_nowords.png" type="image/png">
 </head>
-<body ng-app="home_app">
+<body ng-app="home_app" style = "margin-bottom: 120px; text-align: center;">
 <div class="content">
     <div ng-controller="HomeController">
         <div>
             </br>
-            <div style="text-align: right;">
-                <div style="color:#636363; text-align: center; float: right; padding-right: 200px; font-variant: small-caps; vertical-align: center"
-                     width="500" height="200">
+            <div style="display: inline-block; align-content: center;">
+                <div style="color:#636363; text-align: center; float: right; padding-right: 200px; font-variant: small-caps; vertical-align: center"  width="500" height="200">
                     <h1 style="clear: left; margin-bottom: 0px">Dance With Dawn</h1>
-                    <h5 style="margin-top: 0px; color: #969696;">Kids Dance & Theatre Classes Filled With Love &
-                        Joy</h5>
+                    <h5 style="margin-top: 0px; color: #969696;">Kids Dance & Theatre Classes Filled With Love & Joy</h5>
                 </div>
                 <img style="float: right;" src="images/logo_nowords.png" height="100">
             </div>
-
+        </div>
+        <div>
+            <label for="important_news" style="font-weight: bold; font-size: large;font-variant: small-caps;">Important News</label></br>
+            <label class="pageContent" id="important_news">{{(admin_features | filter:{type:'ppNews'})[0].message}}</label></br></br></br>
+            <label for="event_calendar" style="font-weight: bold; font-size: large;font-variant: small-caps;">Upcoming Events</label>
+            <label for="page_links" style="font-weight: bold; font-size: large;font-variant: small-caps;">Page Links</label></br>
+            <a href="/parent_settings"> Settings </a><br>
+            <a href="/parent_pictures"> Pictures </a><br>
+            <a href="/parent_forms"> Forms </a><br>
+            <a href="/paypal-temp"> Pay For Classes </a><br>
+            <a href="/parent_portal"> Parent Portal Home </a>
+            </br></br>
         </div>
     </div>
 </div>
-
-<div id="ppStaticMenu"></div>
-<div ng-controller = "HomeController" style="float:right; width: 50%; padding-right: 50px">
-    <h1>Important News</h1>
-    <label class="pageContent">{{(admin_features | filter:{type:'ppNews'})[0].message}}</label>
-  
-</div>
-
-
-<div id="footer" style ="position: absolute; bottom:0; left:0; height:100px; width: 100%"></div>
+<div id="footer"></div>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
 <script src="https://code.angularjs.org/1.4.3/angular.js"></script>
