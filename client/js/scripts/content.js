@@ -9,7 +9,3 @@ $(function(){
 $(function(){
     $("#ppHeader").load("ppHeader.html");
 });
-
-$(function(){
-    $("#ppStaticMenu").load("ppStaticMenu.html");
-});

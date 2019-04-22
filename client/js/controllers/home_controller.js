@@ -84,5 +84,11 @@ angular.module('home_collections').controller('HomeController', ['$scope', 'Home
                 $scope.display = {show:0};
             };
         };
+
+        $scope.parent_info = function(){
+           $scope.update_parent = function (parent) {
+                alert(1);
+           };
+        };
     }
 ]);
