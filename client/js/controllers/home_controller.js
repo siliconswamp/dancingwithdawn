@@ -87,7 +87,7 @@ angular.module('home_collections').controller('HomeController', ['$scope', 'Home
 
         $scope.parent_info = function(){
            $scope.update_parent = function (parent) {
-                alert(1);
+               alert(1);
            };
         };
     }
