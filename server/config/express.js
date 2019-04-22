@@ -8,8 +8,7 @@ var path = require('path'),
     config = require('./config'),
     User = require("../models/user"),
     LocalStrategy = require("passport-local"),
-    passportLocalMongoose = require("passport-local-mongoose"),
-    cors = require('cors');
+    passportLocalMongoose = require("passport-local-mongoose");
     
     
   // Routes
@@ -17,10 +16,6 @@ var portalRouter = require('../routes/portal.server.routes'),
     homeRouter = require('../routes/home.server.routes'),
     faqRouter = require('../routes/faq.server.routes');
     authRouter = require("../routes/auth.server.routes");
-
-const corsOptions = {
-    origin: 'http://dancingwithdawn.herokuapp.com/'
-}
 
 module.exports.init = function() {
   // assign mongoose promise library and connect to database
@@ -66,7 +61,11 @@ module.exports.init = function() {
   });
 
   // CORS Fix
-  app.use(cors(corsOptions))
+  app.use(function(req, res, next) {
+    res.header("Access-Control-Allow-Origin", "http://dancingwithdawn.herokuapp.com/faq");
+    res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
+    next();
+  });
 
   /**TODO
    Serve static files */
