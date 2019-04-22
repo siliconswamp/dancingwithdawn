@@ -61,6 +61,14 @@ module.exports.init = function() {
     next();
   });
 
+  // CORS Fix
+  app.use(function(req, res, next) {
+    res.header("Access-Control-Allow-Origin", "http://dancingwithdawn.herokuapp.com/");
+    res.header("Vary", "Origin");
+    res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
+    next();
+  });
+
   /**TODO
    Serve static files */
   app.use('/', express.static('client'));
