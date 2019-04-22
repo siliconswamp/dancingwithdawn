@@ -28,7 +28,7 @@ module.exports.init = function() {
   //initialize app
   var app = express();
 
-  app.use('/favicon.ico', express.static('C:\\Users\\ragbayani\\Documents\\Personal\\School\\CEN3031\\DD\\server\\config\\public\\images\\favicon.ico'));
+  app.use('/favicon.ico', express.static('\\images\\public\\favicon.ico'));
 
   // Enable EJS
   app.set('view engine', 'ejs');
