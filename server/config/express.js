@@ -12,11 +12,10 @@ var path = require('path'),
     
     
   // Routes
-  var portalRouter = require('../routes/portal.server.routes'),
-      homeRouter = require('../routes/home.server.routes'),
-      faqRouter = require('../routes/faq.server.routes');
-      authRouter = require("../routes/auth.server.routes");
-
+var portalRouter = require('../routes/portal.server.routes'),
+    homeRouter = require('../routes/home.server.routes'),
+    faqRouter = require('../routes/faq.server.routes');
+    authRouter = require("../routes/auth.server.routes");
 
 module.exports.init = function() {
   // assign mongoose promise library and connect to database
@@ -58,6 +57,13 @@ module.exports.init = function() {
     res.locals.currentUser = req.user;
     res.locals.success = req.flash('success');
     res.locals.error = req.flash('error');
+    next();
+  });
+
+  // CORS Fix
+  app.use(function(req, res, next) {
+    res.header("Access-Control-Allow-Origin", "*");
+    res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
     next();
   });
 
