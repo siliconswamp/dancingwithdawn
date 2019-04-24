@@ -3,6 +3,14 @@ var router  = express.Router();
 var passport = require("passport");
 var User = require("../models/user");
 
+function loggedIn(req, res, next) {
+    if (req.user) {
+        next();
+    } else {
+        res.redirect('/login');
+    }
+}
+
 // Render home page
 router.get("/", function(req, res){
     res.render("index", {page: 'index'});
@@ -29,12 +37,12 @@ router.get("/admin_faq", function(req, res){
 });
 
 // Render admin FAQ editing page
-router.get("/admin_text", function(req, res){
+router.get("/admin_text", loggedIn, function(req, res){
     res.render("admin_text", {page: 'admin_text'}); 
 });
 
 // Render admin portal editing page
-router.get("/admin_portal", function(req, res){
+router.get("/admin_portal", loggedIn, function(req, res){
     res.render("admin_portal", {page: 'admin_portal'});
 });
 
@@ -59,12 +67,12 @@ router.get("/lessons", function(req, res){
 });
 
 // Render paypal page
-router.get("/paypal-temp", function(req, res){
+router.get("/paypal-temp", loggedIn, function(req, res){
     res.render("paypal-temp", {page: 'paypal-temp'}); 
 });
 
 // Render photo admin page
-router.get("/admin_photos", function(req, res){
+router.get("/admin_photos", loggedIn, function(req, res){
     res.render("admin_photos", {page: 'admin_photos'});
 });
 
@@ -74,7 +82,7 @@ router.get("/photos_test", function(req, res){
 });
 
 // Render photo page
-router.get("/photos", function(req, res){
+router.get("/photos", loggedIn, function(req, res){
     res.render("photos", {page: 'photos'}); 
 });
 
@@ -84,27 +92,27 @@ router.get("/parent_forms", function(req, res){
 });
 
 // Render parent portal history page
-router.get("/parent_history", function(req, res){
+router.get("/parent_history", loggedIn, function(req, res){
     res.render("parent_history", {page: 'parent_history'});
 });
 
 // Render parent portal pictures admins page
-router.get("/ppPictures_admin", function(req, res){
+router.get("/ppPictures_admin", loggedIn, function(req, res){
     res.render("ppPictures_admin", {page: 'ppPictures_admin'}); 
 });
 
 // Render parent portal pictures page
-router.get("/parent_pictures", function(req, res){
+router.get("/parent_pictures", loggedIn, function(req, res){
     res.render("parent_pictures", {page: 'parent_pictures'});
 });
 
 // Render parent portal forms page
-router.get("/parent_settings", function(req, res){
+router.get("/parent_settings", loggedIn, function(req, res){
     res.render("parent_settings", {page: 'parent_settings'});
 });
 
 // Render parent portal
-router.get("/parent_portal", function(req, res){
+router.get("/parent_portal", loggedIn, function(req, res){
     res.render("parent_portal", {page: 'parent_portal'});
  });
 
